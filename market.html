@@ -1,0 +1,2237 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>คู่มือเตรียมสอบ Marketing — บทที่ 8-11</title>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Prompt', 'Sarabun', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: #2c3e50;
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+  .header {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  }
+  .header h1 { font-size: 2.5rem; margin-bottom: 8px; font-weight: 700; }
+  .header p { font-size: 1.1rem; opacity: 0.9; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+
+  /* Tabs */
+  .tabs {
+    display: flex;
+    flex-wrap: wrap;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    margin: 30px 0 20px 0;
+    overflow: hidden;
+  }
+  .tab-btn {
+    flex: 1;
+    min-width: 200px;
+    padding: 18px 20px;
+    background: white;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #555;
+    transition: all 0.3s;
+    border-bottom: 4px solid transparent;
+  }
+  .tab-btn:hover { background: #f0f4f8; color: #1e3c72; }
+  .tab-btn.active {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    border-bottom-color: #ffd700;
+  }
+  .tab-content { display: none; animation: fadeIn 0.5s; }
+  .tab-content.active { display: block; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+  /* Cards */
+  .card {
+    background: white;
+    border-radius: 12px;
+    padding: 28px;
+    margin: 20px 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .card:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+  .card h2 {
+    color: #1e3c72;
+    font-size: 1.6rem;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 3px solid #ffd700;
+    display: inline-block;
+  }
+  .card h3 {
+    color: #2a5298;
+    font-size: 1.25rem;
+    margin: 20px 0 12px 0;
+  }
+  .card h4 {
+    color: #1e3c72;
+    font-size: 1.1rem;
+    margin: 14px 0 8px 0;
+  }
+  .card p { margin: 10px 0; color: #444; }
+  .card ul { margin: 10px 0 10px 24px; }
+  .card li { margin: 6px 0; color: #444; }
+
+  /* Intro box */
+  .intro-box {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    margin: 20px 0;
+  }
+  .intro-box h2 { color: white; border-bottom-color: #ffd700; }
+
+  /* Process flow */
+  .process-flow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 24px 0;
+    justify-content: center;
+  }
+  .process-step {
+    flex: 1;
+    min-width: 130px;
+    background: linear-gradient(135deg, #43cea2, #185a9d);
+    color: white;
+    padding: 16px 12px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+    font-weight: 500;
+    font-size: 0.9rem;
+  }
+  .process-step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  }
+  .process-step.active {
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+  }
+  .process-step .num {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 50%;
+    line-height: 28px;
+    margin-bottom: 6px;
+    font-weight: 700;
+  }
+  .process-detail {
+    background: #fff8e7;
+    border-left: 5px solid #ffd700;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    display: none;
+    animation: slideIn 0.4s;
+  }
+  .process-detail.active { display: block; }
+  @keyframes slideIn { from { opacity: 0; max-height: 0; } to { opacity: 1; max-height: 500px; } }
+
+  /* Grid */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    margin: 20px 0;
+  }
+  .grid-item {
+    background: linear-gradient(135deg, #f6f9fc, #e9eff5);
+    padding: 20px;
+    border-radius: 10px;
+    border-top: 4px solid #2a5298;
+    transition: all 0.3s;
+  }
+  .grid-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  }
+  .grid-item h4 { color: #1e3c72; margin-bottom: 8px; }
+  .grid-item p { font-size: 0.95rem; }
+
+  /* Stage tabs */
+  .stage-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 16px 0;
+  }
+  .stage-btn {
+    padding: 12px 22px;
+    background: #e9eff5;
+    border: 2px solid transparent;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.3s;
+    color: #2c3e50;
+  }
+  .stage-btn:hover { background: #d3dde8; }
+  .stage-btn.active {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    border-color: #ffd700;
+  }
+  .stage-content { display: none; }
+  .stage-content.active { display: block; animation: fadeIn 0.4s; }
+
+  /* Comparison table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  }
+  th, td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  th {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    font-weight: 600;
+  }
+  tr:hover td { background: #f5f7fa; }
+
+  /* Highlight boxes */
+  .highlight {
+    background: linear-gradient(135deg, #fff8e7, #fff3d4);
+    border-left: 5px solid #ffd700;
+    padding: 16px 20px;
+    border-radius: 6px;
+    margin: 16px 0;
+  }
+  .warning {
+    background: linear-gradient(135deg, #fee, #fdd);
+    border-left: 5px solid #e74c3c;
+    padding: 16px 20px;
+    border-radius: 6px;
+    margin: 16px 0;
+  }
+  .success {
+    background: linear-gradient(135deg, #e8f8f0, #d4f0e0);
+    border-left: 5px solid #27ae60;
+    padding: 16px 20px;
+    border-radius: 6px;
+    margin: 16px 0;
+  }
+  .info {
+    background: linear-gradient(135deg, #e8f0fe, #d4e1fc);
+    border-left: 5px solid #3498db;
+    padding: 16px 20px;
+    border-radius: 6px;
+    margin: 16px 0;
+  }
+
+  /* Quiz / Interactive */
+  .quiz-box {
+    background: linear-gradient(135deg, #ffeaa7, #fab1a0);
+    padding: 24px;
+    border-radius: 12px;
+    margin: 24px 0;
+  }
+  .quiz-box h3 { color: #2c3e50; }
+  .quiz-options { display: grid; gap: 10px; margin: 12px 0; }
+  .quiz-option {
+    padding: 12px 18px;
+    background: white;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+    text-align: left;
+    font-size: 0.95rem;
+  }
+  .quiz-option:hover { border-color: #1e3c72; transform: translateX(5px); }
+  .quiz-option.correct { background: #d4f0e0; border-color: #27ae60; }
+  .quiz-option.wrong { background: #fdd; border-color: #e74c3c; }
+  .quiz-feedback { margin-top: 12px; font-weight: 500; }
+
+  /* SVG charts */
+  .chart-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    text-align: center;
+  }
+  .chart-container svg { max-width: 100%; height: auto; }
+
+  /* Tags */
+  .tag {
+    display: inline-block;
+    padding: 4px 12px;
+    background: #ffd700;
+    color: #1e3c72;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin: 4px 4px 4px 0;
+  }
+  .tag.green { background: #43cea2; color: white; }
+  .tag.red { background: #e74c3c; color: white; }
+  .tag.blue { background: #3498db; color: white; }
+
+  /* Accordion */
+  .accordion-item {
+    background: white;
+    border-radius: 8px;
+    margin: 8px 0;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  .accordion-header {
+    padding: 16px 20px;
+    background: linear-gradient(135deg, #f6f9fc, #e9eff5);
+    cursor: pointer;
+    font-weight: 600;
+    color: #1e3c72;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s;
+  }
+  .accordion-header:hover { background: linear-gradient(135deg, #e9eff5, #d3dde8); }
+  .accordion-header .arrow { transition: transform 0.3s; font-size: 0.85rem; }
+  .accordion-item.active .accordion-header .arrow { transform: rotate(180deg); }
+  .accordion-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    padding: 0 20px;
+  }
+  .accordion-item.active .accordion-body {
+    max-height: 1000px;
+    padding: 16px 20px 20px 20px;
+  }
+
+  /* Channel diagram */
+  .channel-diagram {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 20px;
+    background: #f6f9fc;
+    border-radius: 10px;
+    margin: 16px 0;
+  }
+  .channel-node {
+    padding: 12px 18px;
+    background: white;
+    border: 2px solid #2a5298;
+    border-radius: 8px;
+    font-weight: 500;
+    color: #1e3c72;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  }
+  .channel-arrow {
+    color: #43cea2;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 30px 20px;
+    color: #555;
+    margin-top: 40px;
+  }
+
+  @media (max-width: 600px) {
+    .header h1 { font-size: 1.6rem; }
+    .tab-btn { min-width: 150px; padding: 14px 12px; font-size: 0.9rem; }
+    .card { padding: 20px; }
+    .card h2 { font-size: 1.3rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>📚 คู่มือเตรียมสอบ Marketing</h1>
+  <p>บทที่ 8-11 | Armstrong & Kotler — Marketing: An Introduction (11e)</p>
+</div>
+
+<div class="container">
+
+  <!-- Tab buttons -->
+  <div class="tabs">
+    <button class="tab-btn active" onclick="showTab(8, this)">📦 บทที่ 8<br><small>New Products & PLC</small></button>
+    <button class="tab-btn" onclick="showTab(9, this)">💰 บทที่ 9<br><small>Pricing</small></button>
+    <button class="tab-btn" onclick="showTab(10, this)">🚚 บทที่ 10<br><small>Marketing Channels</small></button>
+    <button class="tab-btn" onclick="showTab(11, this)">🏪 บทที่ 11<br><small>Retailing & Wholesaling</small></button>
+  </div>
+
+  <!-- ============ CHAPTER 8 ============ -->
+  <div id="tab-8" class="tab-content active">
+
+    <div class="intro-box">
+      <h2>บทที่ 8: การพัฒนาผลิตภัณฑ์ใหม่และการจัดการวงจรชีวิตผลิตภัณฑ์</h2>
+      <p style="margin-top: 12px;">บทนี้เน้นเรื่องการคิดค้น พัฒนา และเปิดตัวผลิตภัณฑ์ใหม่ ตลอดจนกลยุทธ์ในแต่ละช่วงของวงจรชีวิตผลิตภัณฑ์ (Product Life Cycle - PLC) ตั้งแต่เริ่มเข้าตลาดจนถึงตกต่ำ รวมถึงประเด็นความรับผิดชอบต่อสังคมและการตลาดระหว่างประเทศ</p>
+    </div>
+
+    <div class="card">
+      <h2>🎯 วัตถุประสงค์การเรียนรู้</h2>
+      <ul>
+        <li>อธิบายวิธีที่บริษัทค้นหาและพัฒนาแนวคิดผลิตภัณฑ์ใหม่</li>
+        <li>ระบุและอธิบายขั้นตอนกระบวนการพัฒนาผลิตภัณฑ์ใหม่ และข้อพิจารณาในการบริหารจัดการ</li>
+        <li>อธิบายช่วงต่างๆ ของวงจรชีวิตผลิตภัณฑ์ และกลยุทธ์การตลาดที่เปลี่ยนไปในแต่ละช่วง</li>
+        <li>อภิปรายประเด็นเพิ่มเติม: การตัดสินใจที่รับผิดชอบต่อสังคม และการตลาดระหว่างประเทศ</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>🌟 กรณีศึกษา: Google — นวัตกรรมที่ความเร็วแสง</h2>
+      <ul>
+        <li>วางแผนผลิตภัณฑ์ใหม่ล่วงหน้าเพียง 4-5 เดือน เท่านั้น</li>
+        <li>วิศวกรใช้เวลา <strong>20% ของเวลาทำงาน</strong> เพื่อพัฒนาไอเดียของตนเอง</li>
+        <li>เปิดตัวแอปใหม่บน Google Labs ให้ผู้ใช้ทดสอบและให้ feedback</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>📌 New-Product Development คืออะไร?</h2>
+      <p>การพัฒนาผลิตภัณฑ์ดั้งเดิม (original products), การปรับปรุงผลิตภัณฑ์ (improvements), การดัดแปลงผลิตภัณฑ์ (modifications), และแบรนด์ใหม่ ผ่านความพยายามพัฒนาของบริษัทเอง</p>
+
+      <h3>⚠️ สาเหตุของความล้มเหลวของผลิตภัณฑ์ใหม่</h3>
+      <div class="grid">
+        <div class="grid-item">
+          <h4>📊 Overestimation of market size</h4>
+          <p>ประเมินขนาดตลาดสูงเกินจริง</p>
+        </div>
+        <div class="grid-item">
+          <h4>🔧 Design problems</h4>
+          <p>ปัญหาด้านการออกแบบ</p>
+        </div>
+        <div class="grid-item">
+          <h4>💵 Incorrect pricing or positioning</h4>
+          <p>ตั้งราคาหรือวางตำแหน่งผิดพลาด</p>
+        </div>
+        <div class="grid-item">
+          <h4>💸 High development costs</h4>
+          <p>ต้นทุนการพัฒนาสูงเกินไป</p>
+        </div>
+        <div class="grid-item">
+          <h4>🥊 Competitor reaction</h4>
+          <p>ปฏิกิริยาตอบโต้จากคู่แข่ง</p>
+        </div>
+      </div>
+      <div class="warning">
+        <strong>💡 จดจำ:</strong> ความล้มเหลวของผลิตภัณฑ์แต่ละครั้ง คือเงินและความหวังที่สูญเปล่า
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>🔄 8 ขั้นตอนของการพัฒนาผลิตภัณฑ์ใหม่ (Figure 8.1)</h2>
+      <p style="margin-bottom: 16px;">👉 คลิกที่แต่ละขั้นตอนเพื่อดูรายละเอียด</p>
+
+      <div class="process-flow">
+        <div class="process-step" onclick="showStep(1)"><span class="num">1</span><br>Idea Generation</div>
+        <div class="process-step" onclick="showStep(2)"><span class="num">2</span><br>Idea Screening</div>
+        <div class="process-step" onclick="showStep(3)"><span class="num">3</span><br>Concept Dev. & Testing</div>
+        <div class="process-step" onclick="showStep(4)"><span class="num">4</span><br>Marketing Strategy</div>
+      </div>
+      <div class="process-flow">
+        <div class="process-step" onclick="showStep(5)"><span class="num">5</span><br>Business Analysis</div>
+        <div class="process-step" onclick="showStep(6)"><span class="num">6</span><br>Product Development</div>
+        <div class="process-step" onclick="showStep(7)"><span class="num">7</span><br>Test Marketing</div>
+        <div class="process-step" onclick="showStep(8)"><span class="num">8</span><br>Commercialization</div>
+      </div>
+
+      <div id="step-1" class="process-detail">
+        <h3>1️⃣ Idea Generation — การสร้างแนวคิด</h3>
+        <p>การค้นหาแนวคิดผลิตภัณฑ์ใหม่ๆ อย่างเป็นระบบ จาก 2 แหล่ง:</p>
+        <h4>🏢 แหล่งภายใน (Internal sources)</h4>
+        <ul>
+          <li>กระบวนการ R&D แบบดั้งเดิม</li>
+          <li>Intrapreneurs — พนักงานที่มีจิตวิญญาณผู้ประกอบการในบริษัท</li>
+        </ul>
+        <h4>🌍 แหล่งภายนอก (External sources)</h4>
+        <ul>
+          <li>ตัวแทนจำหน่าย (Distributors) และ ซัพพลายเออร์ (Suppliers)</li>
+          <li>คู่แข่งและผลิตภัณฑ์ของคู่แข่ง</li>
+          <li>นิตยสารและงานแสดงสินค้าทางการค้า</li>
+          <li>ลูกค้า — วิเคราะห์ข้อสงสัยและคำร้องเรียนเพื่อค้นหาปัญหาที่ยังไม่ถูกแก้ไข</li>
+        </ul>
+        <h4>👥 Crowdsourcing</h4>
+        <p>เชิญชวนลูกค้า, พนักงาน, นักวิจัยอิสระ, และประชาชนทั่วไปเข้าสู่กระบวนการสร้างนวัตกรรม</p>
+        <div class="info">
+          <strong>กรณีศึกษา:</strong> Netflix เคยตั้งรางวัล <strong>$1 ล้านดอลลาร์</strong> เพื่อหาคนที่จะปรับปรุงระบบแนะนำหนังของตน — ตัวอย่าง crowdsourcing ที่โดดเด่น
+        </div>
+      </div>
+
+      <div id="step-2" class="process-detail">
+        <h3>2️⃣ Idea Screening — การคัดกรองแนวคิด</h3>
+        <p>คัดกรองแนวคิดผลิตภัณฑ์ใหม่เพื่อเลือกแนวคิดที่ดีและคัดออกแนวคิดที่ไม่ดีโดยเร็วที่สุด</p>
+        <div class="success">
+          <strong>เป้าหมาย:</strong> ลดต้นทุนในขั้นต่อไปด้วยการกำจัดไอเดียที่ไม่ดีตั้งแต่เริ่มต้น
+        </div>
+      </div>
+
+      <div id="step-3" class="process-detail">
+        <h3>3️⃣ Concept Development and Testing</h3>
+        <h4>📝 ความแตกต่างระหว่าง 3 คำสำคัญ</h4>
+        <table>
+          <tr><th>คำศัพท์</th><th>ความหมาย</th></tr>
+          <tr><td><strong>Product idea</strong></td><td>ไอเดียคร่าวๆ ของผลิตภัณฑ์ที่บริษัทคิดว่าน่าจะเสนอสู่ตลาดได้</td></tr>
+          <tr><td><strong>Product concept</strong></td><td>เวอร์ชันละเอียดของไอเดียผลิตภัณฑ์ ใช้ภาษาที่มีความหมายต่อผู้บริโภค</td></tr>
+          <tr><td><strong>Product image</strong></td><td>วิธีที่ผู้บริโภครับรู้ผลิตภัณฑ์จริงหรือผลิตภัณฑ์ที่อาจจะมี</td></tr>
+        </table>
+        <h4>🧪 Concept Testing</h4>
+        <p>ทดสอบ concept กับกลุ่มผู้บริโภคเป้าหมายเพื่อดูว่ามีความน่าสนใจหรือไม่ ใช้คำอธิบาย รูปภาพ หรือโมเดลของสินค้า แล้วถามปฏิกิริยาของผู้บริโภค</p>
+      </div>
+
+      <div id="step-4" class="process-detail">
+        <h3>4️⃣ Marketing Strategy Development</h3>
+        <p>การออกแบบกลยุทธ์การตลาดเริ่มต้นสำหรับผลิตภัณฑ์ใหม่ โดยอิงจาก product concept ประกอบด้วย 3 ส่วน:</p>
+        <ul>
+          <li><strong>ส่วนที่ 1:</strong> อธิบาย Target market, Value proposition, ยอดขาย, ส่วนแบ่งตลาด, และเป้าหมายกำไร</li>
+          <li><strong>ส่วนที่ 2:</strong> ราคา, การจัดจำหน่าย, และงบประมาณการตลาดที่วางแผนไว้</li>
+          <li><strong>ส่วนที่ 3:</strong> เป้าหมายยอดขายระยะยาว, กำไร, และกลยุทธ์ marketing mix</li>
+        </ul>
+      </div>
+
+      <div id="step-5" class="process-detail">
+        <h3>5️⃣ Business Analysis — การวิเคราะห์ทางธุรกิจ</h3>
+        <p>การทบทวนการคาดการณ์ยอดขาย, ต้นทุน, และกำไรของผลิตภัณฑ์ใหม่ เพื่อตรวจสอบว่าปัจจัยเหล่านี้ตอบโจทย์เป้าหมายของบริษัทหรือไม่</p>
+      </div>
+
+      <div id="step-6" class="process-detail">
+        <h3>6️⃣ Product Development — การพัฒนาผลิตภัณฑ์</h3>
+        <p>การพัฒนา product concept ให้กลายเป็นผลิตภัณฑ์ทางกายภาพ เพื่อให้แน่ใจว่าไอเดียสามารถแปรเปลี่ยนเป็นข้อเสนอที่ใช้งานได้ในตลาด</p>
+        <ul>
+          <li>สร้าง <strong>Prototypes</strong> (ต้นแบบ)</li>
+          <li>ดำเนินการ <strong>Consumer tests</strong></li>
+        </ul>
+      </div>
+
+      <div id="step-7" class="process-detail">
+        <h3>7️⃣ Test Marketing — การทดสอบตลาด</h3>
+        <p>นำผลิตภัณฑ์และโปรแกรมการตลาดเข้าสู่สภาพแวดล้อมตลาดจริง</p>
+        <h4>3 ประเภทของ Test Marketing</h4>
+        <ul>
+          <li><strong>Standard test markets:</strong> ครอบคลุมกว้างขวางและมีค่าใช้จ่ายสูง</li>
+          <li><strong>Simulated test markets:</strong> วัดการตอบสนองในร้านในห้องทดลอง หรือร้านออนไลน์จำลอง</li>
+          <li><strong>Controlled test markets:</strong> ทดสอบกับกลุ่มผู้ซื้อและร้านค้าที่ควบคุม</li>
+        </ul>
+        <div class="info">
+          <strong>กรณีศึกษา:</strong> Starbucks ใช้เวลา 20 ปีพัฒนา Starbucks VIA instant Coffee และทดสอบหลายเดือนใน Chicago และ Seattle ก่อนออกสู่ตลาดทั่วประเทศ
+        </div>
+      </div>
+
+      <div id="step-8" class="process-detail">
+        <h3>8️⃣ Commercialization — การออกสู่ตลาดเชิงพาณิชย์</h3>
+        <p>การนำผลิตภัณฑ์ใหม่เข้าสู่ตลาดจริง บริษัทต้องตัดสินใจ:</p>
+        <ul>
+          <li><strong>เมื่อไหร่</strong> ที่จะเปิดตัวผลิตภัณฑ์</li>
+          <li><strong>ที่ไหน</strong> ที่จะเปิดตัวผลิตภัณฑ์ (สถานที่เดียว, รัฐ, ภูมิภาค, ทั่วประเทศ, นานาชาติ)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>🤝 การจัดการการพัฒนาผลิตภัณฑ์ใหม่</h2>
+      <p>บริษัทต้องใช้วิธีการแบบ <strong>Holistic</strong> (องค์รวม) ซึ่งประกอบด้วย:</p>
+      <div class="grid">
+        <div class="grid-item">
+          <h4>👤 Customer-centered NPD</h4>
+          <p>เน้นค้นหาวิธีใหม่ๆ ในการแก้ปัญหาของลูกค้าและสร้างประสบการณ์ที่ทำให้ลูกค้าพึงพอใจ</p>
+          <p style="margin-top:8px; font-size:0.9rem; color:#555;"><em>ตัวอย่าง: P&G ใช้ Connect+Develop เป็น crowdsourcing site</em></p>
+        </div>
+        <div class="grid-item">
+          <h4>👥 Team-based NPD</h4>
+          <p>หลายแผนกในบริษัททำงานใกล้ชิดกัน ขั้นตอนเหลื่อมกันเพื่อประหยัดเวลา ใช้ cross-functional teams ทำให้พัฒนาเร็วและยืดหยุ่น แต่อาจสร้างความตึงเครียดในองค์กร</p>
+        </div>
+        <div class="grid-item">
+          <h4>⚙️ Systematic NPD</h4>
+          <p>กระบวนการต้องเป็นระบบและองค์รวม ระบบจัดการนวัตกรรมช่วย: รวบรวม, ทบทวน, ประเมิน, และจัดการแนวคิดใหม่ๆ; สร้างวัฒนธรรมที่เน้นนวัตกรรม; ได้แนวคิดจำนวนมากขึ้น</p>
+        </div>
+      </div>
+      <div class="info">
+        <strong>กรณีศึกษา LEGO:</strong> เมื่อยอดขายตก LEGO เริ่มกระบวนการพัฒนาโดยฟังลูกค้าและให้ลูกค้ามีส่วนร่วมในการออกแบบ ผ่านเว็บไซต์ Design By Me ที่ลูกค้าโหลดซอฟต์แวร์ออกแบบ 3D และสั่งชุดเลโก้ของตนเอง
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>📈 วงจรชีวิตผลิตภัณฑ์ (Product Life Cycle - PLC)</h2>
+      <p>เส้นทางของยอดขายและกำไรของผลิตภัณฑ์ตลอดอายุการใช้งาน</p>
+
+      <div class="chart-container">
+        <h3 style="margin-bottom: 16px;">Figure 8.2 — ยอดขายและกำไรตลอดวงจรชีวิต</h3>
+        <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+          <!-- Axes -->
+          <line x1="60" y1="350" x2="760" y2="350" stroke="#2c3e50" stroke-width="2"/>
+          <line x1="60" y1="50" x2="60" y2="350" stroke="#2c3e50" stroke-width="2"/>
+          <text x="20" y="40" font-family="Prompt" font-size="13" fill="#2c3e50">$ ยอดขาย/กำไร</text>
+          <text x="730" y="370" font-family="Prompt" font-size="13" fill="#2c3e50">เวลา</text>
+          <line x1="60" y1="220" x2="760" y2="220" stroke="#bdc3c7" stroke-width="1" stroke-dasharray="3,3"/>
+          <text x="30" y="225" font-family="Prompt" font-size="11" fill="#7f8c8d">0</text>
+
+          <!-- Stage dividers -->
+          <line x1="180" y1="50" x2="180" y2="350" stroke="#bdc3c7" stroke-width="1" stroke-dasharray="4,4"/>
+          <line x1="320" y1="50" x2="320" y2="350" stroke="#bdc3c7" stroke-width="1" stroke-dasharray="4,4"/>
+          <line x1="500" y1="50" x2="500" y2="350" stroke="#bdc3c7" stroke-width="1" stroke-dasharray="4,4"/>
+          <line x1="640" y1="50" x2="640" y2="350" stroke="#bdc3c7" stroke-width="1" stroke-dasharray="4,4"/>
+
+          <!-- Stage labels -->
+          <text x="120" y="380" font-family="Prompt" font-size="12" fill="#2c3e50" text-anchor="middle">Product Dev</text>
+          <text x="250" y="380" font-family="Prompt" font-size="12" fill="#2c3e50" text-anchor="middle">Introduction</text>
+          <text x="410" y="380" font-family="Prompt" font-size="12" fill="#2c3e50" text-anchor="middle">Growth</text>
+          <text x="570" y="380" font-family="Prompt" font-size="12" fill="#2c3e50" text-anchor="middle">Maturity</text>
+          <text x="700" y="380" font-family="Prompt" font-size="12" fill="#2c3e50" text-anchor="middle">Decline</text>
+
+          <!-- Sales curve (green) -->
+          <path d="M 60 220 Q 130 220 180 220 Q 250 200 320 150 Q 410 80 500 80 Q 570 110 640 180 Q 700 240 760 280" stroke="#27ae60" stroke-width="4" fill="none"/>
+          <text x="500" y="60" font-family="Prompt" font-size="16" font-weight="700" fill="#27ae60">Sales</text>
+
+          <!-- Profit curve (red) -->
+          <path d="M 60 220 Q 120 280 180 270 Q 240 230 320 180 Q 410 130 500 140 Q 570 180 640 220 Q 700 240 760 240" stroke="#e74c3c" stroke-width="4" fill="none"/>
+          <text x="430" y="125" font-family="Prompt" font-size="16" font-weight="700" fill="#e74c3c">Profits</text>
+
+          <text x="20" y="370" font-family="Prompt" font-size="11" fill="#7f8c8d">ขาดทุน</text>
+        </svg>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>🎭 Style, Fashion, Fad — รูปแบบของ PLC พิเศษ</h2>
+      <p>PLC ไม่ใช่ทุกผลิตภัณฑ์ที่ผ่านครบ 5 ขั้น สามารถใช้กับ product class, product form, brand รวมถึง:</p>
+      <div class="grid">
+        <div class="grid-item">
+          <h4>🎨 Style</h4>
+          <p>รูปแบบการแสดงออกพื้นฐานที่โดดเด่น <em>(เช่น สไตล์อาร์ตเดโค)</em></p>
+          <p style="margin-top:8px;"><strong>ลักษณะ:</strong> ยาวมาก มีหลายรอบ ขึ้นๆ ลงๆ</p>
+        </div>
+        <div class="grid-item">
+          <h4>👗 Fashion</h4>
+          <p>สไตล์ที่ได้รับการยอมรับหรือเป็นที่นิยมในปัจจุบันในวงการนั้น <em>(เช่น เสื้อสูทธุรกิจ)</em></p>
+          <p style="margin-top:8px;"><strong>ลักษณะ:</strong> ค่อยๆ ขึ้น และค่อยๆ ลง</p>
+        </div>
+        <div class="grid-item">
+          <h4>🌟 Fad</h4>
+          <p>ช่วงเวลาสั้นๆ ที่ยอดขายสูงผิดปกติจากความคลั่งไคล้ของผู้บริโภค</p>
+          <p style="margin-top:8px;"><strong>ลักษณะ:</strong> พุ่งขึ้นและร่วงลงอย่างรวดเร็ว</p>
+        </div>
+      </div>
+
+      <div class="chart-container">
+        <h3 style="margin-bottom:12px;">Figure 8.3 — เปรียบเทียบ Styles, Fashions, Fads</h3>
+        <svg viewBox="0 0 800 280" xmlns="http://www.w3.org/2000/svg">
+          <!-- Style -->
+          <line x1="60" y1="240" x2="240" y2="240" stroke="#2c3e50" stroke-width="2"/>
+          <line x1="60" y1="40" x2="60" y2="240" stroke="#2c3e50" stroke-width="2"/>
+          <text x="120" y="30" font-family="Prompt" font-size="16" font-weight="700" fill="#27ae60">Style</text>
+          <path d="M 60 240 C 68 240 72 200 82 155 C 92 110 108 140 118 165 C 128 190 138 172 150 130 C 162 88 178 118 190 148 C 200 172 210 158 225 128 C 232 114 237 112 240 110" stroke="#27ae60" stroke-width="3" fill="none"/>
+          <text x="140" y="260" font-family="Prompt" font-size="11" fill="#7f8c8d">เวลา</text>
+
+          <!-- Fashion -->
+          <line x1="320" y1="240" x2="500" y2="240" stroke="#2c3e50" stroke-width="2"/>
+          <line x1="320" y1="40" x2="320" y2="240" stroke="#2c3e50" stroke-width="2"/>
+          <text x="380" y="30" font-family="Prompt" font-size="16" font-weight="700" fill="#2c3e50">Fashion</text>
+          <path d="M 320 238 C 342 235 358 210 378 158 C 398 106 412 72 420 72 C 428 72 452 106 468 158 C 482 200 494 228 500 238" stroke="#2c3e50" stroke-width="3" fill="none"/>
+          <text x="400" y="260" font-family="Prompt" font-size="11" fill="#7f8c8d">เวลา</text>
+
+          <!-- Fad -->
+          <line x1="580" y1="240" x2="760" y2="240" stroke="#2c3e50" stroke-width="2"/>
+          <line x1="580" y1="40" x2="580" y2="240" stroke="#2c3e50" stroke-width="2"/>
+          <text x="650" y="30" font-family="Prompt" font-size="16" font-weight="700" fill="#e74c3c">Fad</text>
+          <path d="M 580 240 L 660 60 L 720 230 L 760 235" stroke="#e74c3c" stroke-width="3" fill="none"/>
+          <text x="660" y="260" font-family="Prompt" font-size="11" fill="#7f8c8d">เวลา</text>
+        </svg>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>🔍 4 ช่วงของ PLC: ลักษณะและกลยุทธ์ (สำคัญมาก!)</h2>
+      <p>👉 คลิกแต่ละช่วงเพื่อดูรายละเอียด</p>
+
+      <div class="stage-tabs">
+        <button class="stage-btn active" onclick="showStage('intro', this)">🚀 Introduction</button>
+        <button class="stage-btn" onclick="showStage('growth', this)">📈 Growth</button>
+        <button class="stage-btn" onclick="showStage('maturity', this)">🏔️ Maturity</button>
+        <button class="stage-btn" onclick="showStage('decline', this)">📉 Decline</button>
+      </div>
+
+      <div id="stage-intro" class="stage-content active">
+        <h3>🚀 ช่วงแนะนำสู่ตลาด (Introduction Stage)</h3>
+        <table>
+          <tr><th colspan="2">ลักษณะ</th></tr>
+          <tr><td><strong>ยอดขาย</strong></td><td>ต่ำ (Low)</td></tr>
+          <tr><td><strong>ต้นทุน</strong></td><td>สูงต่อลูกค้า (High cost per customer)</td></tr>
+          <tr><td><strong>กำไร</strong></td><td>ติดลบหรือต่ำ (Negative or low)</td></tr>
+          <tr><td><strong>ลูกค้า</strong></td><td>นวัตกร (Innovators)</td></tr>
+          <tr><td><strong>คู่แข่ง</strong></td><td>น้อย (Few)</td></tr>
+          <tr><td><strong>วัตถุประสงค์</strong></td><td>สร้างการรับรู้และการทดลองใช้</td></tr>
+        </table>
+        <h4>กลยุทธ์ Marketing Mix</h4>
+        <ul>
+          <li><strong>Product:</strong> เสนอผลิตภัณฑ์พื้นฐาน</li>
+          <li><strong>Price:</strong> ใช้ Cost-plus pricing</li>
+          <li><strong>Distribution:</strong> สร้างการกระจายแบบเลือกสรร (Selective)</li>
+          <li><strong>Advertising:</strong> สร้างการรับรู้กับ early adopters และ dealers</li>
+          <li><strong>Promotion:</strong> โปรโมชั่นหนักเพื่อกระตุ้นการทดลอง</li>
+        </ul>
+      </div>
+
+      <div id="stage-growth" class="stage-content">
+        <h3>📈 ช่วงเติบโต (Growth Stage)</h3>
+        <table>
+          <tr><th colspan="2">ลักษณะ</th></tr>
+          <tr><td><strong>ยอดขาย</strong></td><td>เพิ่มขึ้นอย่างรวดเร็ว (Rapidly rising)</td></tr>
+          <tr><td><strong>ต้นทุน</strong></td><td>เฉลี่ยต่อลูกค้า (Average)</td></tr>
+          <tr><td><strong>กำไร</strong></td><td>เพิ่มสูงขึ้น (Rising)</td></tr>
+          <tr><td><strong>ลูกค้า</strong></td><td>Early adopters</td></tr>
+          <tr><td><strong>คู่แข่ง</strong></td><td>เพิ่มจำนวนขึ้น (Growing)</td></tr>
+          <tr><td><strong>วัตถุประสงค์</strong></td><td>ขยายส่วนแบ่งตลาดให้สูงสุด</td></tr>
+        </table>
+        <h4>กลยุทธ์ Marketing Mix</h4>
+        <ul>
+          <li><strong>Product:</strong> เสนอ extensions, service, warranty</li>
+          <li><strong>Price:</strong> ตั้งราคาเพื่อ penetrate ตลาด</li>
+          <li><strong>Distribution:</strong> สร้างการกระจายแบบเข้มข้น (Intensive)</li>
+          <li><strong>Advertising:</strong> สร้างการรับรู้และความสนใจในตลาดมวลชน</li>
+          <li><strong>Promotion:</strong> ลดลง เพื่อใช้ประโยชน์จากดีมานด์ที่สูง</li>
+        </ul>
+      </div>
+
+      <div id="stage-maturity" class="stage-content">
+        <h3>🏔️ ช่วงอิ่มตัว (Maturity Stage)</h3>
+        <table>
+          <tr><th colspan="2">ลักษณะ</th></tr>
+          <tr><td><strong>ยอดขาย</strong></td><td>สูงสุด (Peak sales)</td></tr>
+          <tr><td><strong>ต้นทุน</strong></td><td>ต่ำต่อลูกค้า (Low)</td></tr>
+          <tr><td><strong>กำไร</strong></td><td>สูง (High)</td></tr>
+          <tr><td><strong>ลูกค้า</strong></td><td>Middle majority</td></tr>
+          <tr><td><strong>คู่แข่ง</strong></td><td>คงที่ เริ่มลดลง</td></tr>
+          <tr><td><strong>วัตถุประสงค์</strong></td><td>กำไรสูงสุดพร้อมรักษาส่วนแบ่งตลาด</td></tr>
+        </table>
+        <h4>กลยุทธ์ Marketing Mix</h4>
+        <ul>
+          <li><strong>Product:</strong> เพิ่มความหลากหลายของแบรนด์และโมเดล</li>
+          <li><strong>Price:</strong> เทียบเท่าหรือต่ำกว่าคู่แข่ง</li>
+          <li><strong>Distribution:</strong> สร้างการกระจายแบบเข้มข้นกว่าเดิม</li>
+          <li><strong>Advertising:</strong> เน้นความแตกต่างและประโยชน์ของแบรนด์</li>
+          <li><strong>Promotion:</strong> เพิ่มขึ้นเพื่อกระตุ้นการสลับแบรนด์</li>
+        </ul>
+        <h4>3 กลยุทธ์ปรับปรุงในช่วง Maturity</h4>
+        <div class="grid">
+          <div class="grid-item">
+            <h4>1. Modifying the Market</h4>
+            <p>เพิ่มการบริโภคปัจจุบัน — หาผู้ใช้ใหม่ จัดวางตำแหน่งใหม่ เพิ่มการใช้</p>
+          </div>
+          <div class="grid-item">
+            <h4>2. Modifying the Product</h4>
+            <p>ปรับคุณภาพ, คุณสมบัติ, สไตล์, packaging — ปรับปรุงความทน เพิ่มฟีเจอร์ใหม่</p>
+          </div>
+          <div class="grid-item">
+            <h4>3. Modifying the Marketing Mix</h4>
+            <p>บริการใหม่/ดีกว่า, ลดราคา, แคมเปญโฆษณาใหม่, ช่องทางใหม่</p>
+          </div>
+        </div>
+        <div class="info">
+          <strong>ตัวอย่าง:</strong> Kellogg's เปลี่ยน Special K อายุ 55 ปีให้กลายเป็นแบรนด์ไลฟ์สไตล์เพื่อสุขภาพและรูปร่าง
+        </div>
+      </div>
+
+      <div id="stage-decline" class="stage-content">
+        <h3>📉 ช่วงตกต่ำ (Decline Stage)</h3>
+        <table>
+          <tr><th colspan="2">ลักษณะ</th></tr>
+          <tr><td><strong>ยอดขาย</strong></td><td>ลดลง (Declining)</td></tr>
+          <tr><td><strong>ต้นทุน</strong></td><td>ต่ำต่อลูกค้า (Low)</td></tr>
+          <tr><td><strong>กำไร</strong></td><td>ลดลง (Declining)</td></tr>
+          <tr><td><strong>ลูกค้า</strong></td><td>Laggards</td></tr>
+          <tr><td><strong>คู่แข่ง</strong></td><td>ลดจำนวนลง</td></tr>
+          <tr><td><strong>วัตถุประสงค์</strong></td><td>ลดรายจ่ายและรีดผลกำไร (milk)</td></tr>
+        </table>
+        <h4>กลยุทธ์ Marketing Mix</h4>
+        <ul>
+          <li><strong>Product:</strong> เลิกผลิตสินค้าที่อ่อนแอ</li>
+          <li><strong>Price:</strong> ลดราคา</li>
+          <li><strong>Distribution:</strong> เลือกสรร — เลิกร้านที่ไม่ทำกำไร</li>
+          <li><strong>Advertising:</strong> ลดเพียงเพื่อรักษาลูกค้า hard-core</li>
+          <li><strong>Promotion:</strong> ลดให้เหลือน้อยที่สุด</li>
+        </ul>
+        <div class="info">
+          <strong>ตัวอย่าง Zippo (79 ปี):</strong> ขยายจากการขายเฉพาะไฟแช็คไปสู่ "ทุกอย่างที่เกี่ยวกับเปลวไฟ" เพื่อตอบรับตลาดที่เปลี่ยนแปลง
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>⚖️ การตัดสินใจเรื่องผลิตภัณฑ์และความรับผิดชอบต่อสังคม</h2>
+      <p>บริษัทต้องพิจารณา:</p>
+      <ul>
+        <li>ประเด็นนโยบายสาธารณะ</li>
+        <li>กฎระเบียบเกี่ยวกับการได้มาหรือเลิกผลิตสินค้า</li>
+        <li>การคุ้มครองสิทธิบัตร (Patent protection)</li>
+        <li>คุณภาพและความปลอดภัยของผลิตภัณฑ์ และการรับประกัน</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>🌐 การตลาดผลิตภัณฑ์และบริการระหว่างประเทศ</h2>
+      <p>บริษัทเผชิญความท้าทายในตลาดต่างประเทศ มี 2 ทางเลือกหลัก:</p>
+      <div class="grid">
+        <div class="grid-item">
+          <h4>🔄 Standardize</h4>
+          <p>กำหนดมาตรฐานผลิตภัณฑ์ให้เหมือนกันในทุกตลาด — ประหยัดต้นทุน</p>
+        </div>
+        <div class="grid-item">
+          <h4>🎯 Adapt</h4>
+          <p>ปรับให้เข้ากับรสนิยมท้องถิ่น</p>
+        </div>
+      </div>
+      <div class="info">
+        <strong>ตัวอย่าง Kit Kat ในญี่ปุ่น:</strong> ได้ประโยชน์จากความบังเอิญที่ชื่อแบรนด์คล้ายกับวลีญี่ปุ่น "kitto katsu" ที่แปลว่า "Surely you win!" จึงกลายเป็นของขวัญยอดนิยมสำหรับนักเรียนสอบ
+      </div>
+    </div>
+
+    <div class="quiz-box">
+      <h3>🧠 ทดสอบความเข้าใจ — บทที่ 8</h3>
+      <p><strong>คำถาม:</strong> ในช่วงใดของ PLC ที่บริษัทควรใช้ "Cost-plus pricing" และมุ่งเน้นการสร้างการรับรู้?</p>
+      <div class="quiz-options">
+        <button class="quiz-option" onclick="checkAnswer(this, true)">A. Introduction (แนะนำสู่ตลาด)</button>
+        <button class="quiz-option" onclick="checkAnswer(this, false)">B. Growth (เติบโต)</button>
+        <button class="quiz-option" onclick="checkAnswer(this, false)">C. Maturity (อิ่มตัว)</button>
+        <button class="quiz-option" onclick="checkAnswer(this, false)">D. Decline (ตกต่ำ)</button>
+      </div>
+      <div class="quiz-feedback"></div>
+    </div>
+
+  </div>
+
+  <!-- ============ CHAPTER 9 ============ -->
+  <div id="tab-9" class="tab-content">
+
+    <div class="intro-box">
+      <h2>บทที่ 9: การตั้งราคา — ความเข้าใจและการเก็บเกี่ยวมูลค่าจากลูกค้า</h2>
+      <p style="margin-top:12px;">บทนี้สอนกลยุทธ์การตั้งราคา 3 รูปแบบหลัก ปัจจัยภายในและภายนอกที่ส่งผลต่อราคา การตั้งราคาผลิตภัณฑ์ใหม่ การตั้งราคา product mix การปรับราคา และการรับมือกับการเปลี่ยนแปลงราคา</p>
+    </div>
+
+    <div class="card">
+      <h2>🎯 วัตถุประสงค์การเรียนรู้</h2>
+      <ul>
+        <li>ระบุ 3 กลยุทธ์การตั้งราคาหลัก และความสำคัญของการเข้าใจการรับรู้คุณค่าของลูกค้า, ต้นทุนของบริษัท, และกลยุทธ์ของคู่แข่ง</li>
+        <li>ระบุปัจจัยภายในและภายนอกที่ส่งผลต่อการตั้งราคา</li>
+        <li>อธิบายกลยุทธ์การตั้งราคาผลิตภัณฑ์ใหม่</li>
+        <li>อธิบายวิธีหาชุดราคาที่เพิ่มผลกำไรจาก product mix สูงสุด</li>
+        <li>อภิปรายวิธีการปรับราคาตามลูกค้าและสถานการณ์</li>
+        <li>อภิปรายประเด็นการริเริ่มและตอบสนองการเปลี่ยนแปลงราคา</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>🛒 กรณีศึกษา: Amazon vs. Walmart — สู้ราคากันออนไลน์</h2>
+      <ul>
+        <li>สงครามราคาระหว่าง Walmart และ Amazon.com เรื่องราคาออนไลน์</li>
+        <li>แม้ Walmart มีรายได้หลักจากร้านค้าปลีก แต่ค้าปลีกออนไลน์เติบโตขึ้นเรื่อยๆ</li>
+        <li>ยอดขายออนไลน์ของ Amazon มากกว่า Walmart ถึง <strong>~7 เท่า</strong></li>
+        <li>ทั้งสองบริษัทแข่งขันเป็น "ผู้ค้าปลีกออนไลน์ที่มีราคาต่ำสุด"</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>💰 Price คืออะไร?</h2>
+      <div class="info">
+        <p><strong>Price</strong> = จำนวนเงินที่เรียกเก็บสำหรับผลิตภัณฑ์หรือบริการ</p>
+        <p style="margin-top:8px;">หรือกล่าวอย่างกว้างขึ้น = ผลรวมของมูลค่าทั้งหมดที่ลูกค้าแลกเปลี่ยนเพื่อรับประโยชน์จากการมีหรือใช้ผลิตภัณฑ์</p>
+      </div>
+
+      <h3>⚔️ Price vs. Value</h3>
+      <ul>
+        <li>การลดต้นทุนในยุคเศรษฐกิจฝืดไม่ใช่คำตอบเสมอ — บริษัทควรขาย <strong>Value (คุณค่า)</strong> ไม่ใช่ Price</li>
+        <li>การลดราคาอาจ: ลดกำไรและจุดชนวนสงครามราคา; ทำให้การรับรู้คุณภาพแบรนด์ลดลง</li>
+        <li>นักการตลาดควรพยายามทำให้ผู้บริโภคเชื่อว่า ราคานั้นสมเหตุสมผลกับคุณค่าที่ได้รับ</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>📊 Figure 9.1 — ปัจจัยพื้นฐานในการตั้งราคา</h2>
+      <div class="chart-container">
+        <svg viewBox="0 0 800 280" xmlns="http://www.w3.org/2000/svg">
+          <!-- Floor box -->
+          <rect x="40" y="100" width="160" height="80" fill="#43cea2" rx="8"/>
+          <text x="120" y="135" font-family="Prompt" font-size="14" font-weight="700" fill="white" text-anchor="middle">Product costs</text>
+          <text x="120" y="160" font-family="Prompt" font-size="11" fill="white" text-anchor="middle">Price floor</text>
+          <text x="120" y="200" font-family="Prompt" font-size="10" fill="#2c3e50" text-anchor="middle">ต่ำกว่านี้ไม่มีกำไร</text>
+
+          <!-- Middle box -->
+          <rect x="280" y="80" width="240" height="120" fill="#3498db" rx="8"/>
+          <text x="400" y="115" font-family="Prompt" font-size="13" font-weight="700" fill="white" text-anchor="middle">Competition &amp;</text>
+          <text x="400" y="135" font-family="Prompt" font-size="13" font-weight="700" fill="white" text-anchor="middle">other external factors</text>
+          <text x="400" y="160" font-family="Prompt" font-size="11" fill="white" text-anchor="middle">Marketing strategy,</text>
+          <text x="400" y="178" font-family="Prompt" font-size="11" fill="white" text-anchor="middle">objectives, and mix</text>
+
+          <!-- Ceiling box -->
+          <rect x="600" y="100" width="160" height="80" fill="#e74c3c" rx="8"/>
+          <text x="680" y="125" font-family="Prompt" font-size="13" font-weight="700" fill="white" text-anchor="middle">Consumer</text>
+          <text x="680" y="145" font-family="Prompt" font-size="13" font-weight="700" fill="white" text-anchor="middle">perceptions</text>
+          <text x="680" y="163" font-family="Prompt" font-size="11" fill="white" text-anchor="middle">Price ceiling</text>
+          <text x="680" y="200" font-family="Prompt" font-size="10" fill="#2c3e50" text-anchor="middle">เกินนี้ไม่มี demand</text>
+
+          <!-- Arrows -->
+          <line x1="200" y1="140" x2="280" y2="140" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrow)"/>
+          <line x1="520" y1="140" x2="600" y2="140" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrow)"/>
+
+          <!-- Price scale -->
+          <line x1="52" y1="240" x2="748" y2="240" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrow)"/>
+          <polygon points="52,235 40,240 52,245" fill="#2c3e50"/>
+          <text x="50" y="260" font-family="Prompt" font-size="13" fill="#2c3e50">$ ต่ำ</text>
+          <text x="400" y="260" font-family="Prompt" font-size="13" font-weight="700" fill="#2c3e50" text-anchor="middle">Price</text>
+          <text x="730" y="260" font-family="Prompt" font-size="13" fill="#2c3e50">$$ สูง</text>
+
+          <defs>
+            <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+              <path d="M0,0 L10,5 L0,10 z" fill="#2c3e50"/>
+            </marker>
+          </defs>
+        </svg>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>🎯 3 กลยุทธ์การตั้งราคาหลัก</h2>
+
+      <h3>1️⃣ Customer Value-Based Pricing</h3>
+      <div class="success">
+        <strong>นิยาม:</strong> ตั้งราคาตามการรับรู้ <strong>คุณค่า</strong> ของผู้ซื้อ ไม่ใช่ตามต้นทุนของผู้ขาย
+      </div>
+      <div class="chart-container">
+        <h4 style="margin-bottom:12px;">เปรียบเทียบ Cost-Based กับ Value-Based Pricing</h4>
+        <svg viewBox="0 0 800 240" xmlns="http://www.w3.org/2000/svg">
+          <!-- Cost-based row -->
+          <text x="20" y="40" font-family="Prompt" font-size="14" font-weight="700" fill="#e74c3c">Cost-based:</text>
+          <rect x="120" y="20" width="140" height="50" fill="white" stroke="#e74c3c" stroke-width="2" rx="6"/>
+          <text x="190" y="50" font-family="Prompt" font-size="12" fill="#2c3e50" text-anchor="middle">Design product</text>
+          <text x="280" y="50" font-family="Prompt" font-size="20" fill="#e74c3c">→</text>
+          <rect x="310" y="20" width="140" height="50" fill="white" stroke="#e74c3c" stroke-width="2" rx="6"/>
+          <text x="380" y="42" font-family="Prompt" font-size="12" fill="#2c3e50" text-anchor="middle">Determine</text>
+          <text x="380" y="58" font-family="Prompt" font-size="12" fill="#2c3e50" text-anchor="middle">product costs</text>
+          <text x="470" y="50" font-family="Prompt" font-size="20" fill="#e74c3c">→</text>
+          <rect x="500" y="20" width="140" height="50" fill="white" stroke="#e74c3c" stroke-width="2" rx="6"/>
+          <text x="570" y="50" font-family="Prompt" font-size="12" fill="#2c3e50" text-anchor="middle">Set price by cost</text>
+          <text x="660" y="50" font-family="Prompt" font-size="20" fill="#e74c3c">→</text>
+          <rect x="690" y="20" width="100" height="50" fill="#e74c3c" rx="6"/>
+          <text x="740" y="42" font-family="Prompt" font-size="12" fill="white" text-anchor="middle">Convince</text>
+          <text x="740" y="58" font-family="Prompt" font-size="12" fill="white" text-anchor="middle">buyers</text>
+
+          <!-- Value-based row -->
+          <text x="20" y="170" font-family="Prompt" font-size="14" font-weight="700" fill="#27ae60">Value-based:</text>
+          <rect x="120" y="150" width="140" height="50" fill="white" stroke="#27ae60" stroke-width="2" rx="6"/>
+          <text x="190" y="172" font-family="Prompt" font-size="12" fill="#2c3e50" text-anchor="middle">Assess customer</text>
+          <text x="190" y="188" font-family="Prompt" font-size="12" fill="#2c3e50" text-anchor="middle">value perceptions</text>
+          <text x="280" y="180" font-family="Prompt" font-size="20" fill="#27ae60">→</text>
+          <rect x="310" y="150" width="140" height="50" fill="white" stroke="#27ae60" stroke-width="2" rx="6"/>
+          <text x="380" y="172" font-family="Prompt" font-size="12" fill="#2c3e50" text-anchor="middle">Set target price</text>
+          <text x="380" y="188" font-family="Prompt" font-size="12" fill="#2c3e50" text-anchor="middle">to match value</text>
+          <text x="470" y="180" font-family="Prompt" font-size="20" fill="#27ae60">→</text>
+          <rect x="500" y="150" width="140" height="50" fill="white" stroke="#27ae60" stroke-width="2" rx="6"/>
+          <text x="570" y="172" font-family="Prompt" font-size="12" fill="#2c3e50" text-anchor="middle">Determine costs</text>
+          <text x="570" y="188" font-family="Prompt" font-size="12" fill="#2c3e50" text-anchor="middle">to incur</text>
+          <text x="660" y="180" font-family="Prompt" font-size="20" fill="#27ae60">→</text>
+          <rect x="690" y="150" width="100" height="50" fill="#27ae60" rx="6"/>
+          <text x="740" y="172" font-family="Prompt" font-size="12" fill="white" text-anchor="middle">Design</text>
+          <text x="740" y="188" font-family="Prompt" font-size="12" fill="white" text-anchor="middle">product</text>
+        </svg>
+      </div>
+
+      <h4>2 ประเภทของ Value-Based Pricing</h4>
+      <div class="grid">
+        <div class="grid-item">
+          <h4>💚 Good-Value Pricing</h4>
+          <p>เสนอผสมผสานคุณภาพและบริการที่เหมาะสมในราคาที่เป็นธรรม</p>
+          <p style="margin-top:8px;"><em>ตัวอย่าง: Snap Fitness — ฟิตเนสไม่หรูหรา ราคาต่ำ เหมาะกับเศรษฐกิจดีและไม่ดี</em></p>
+        </div>
+        <div class="grid-item">
+          <h4>✨ Value-Added Pricing</h4>
+          <p>เพิ่มคุณสมบัติและบริการเพื่อสร้างความแตกต่าง พร้อมเรียกราคาสูงขึ้น</p>
+          <p style="margin-top:8px;"><em>ตัวอย่าง: AMC's Cinema Suites — เพิ่ม amenities แทนลดบริการ ค่าตั๋วสูงขึ้น</em></p>
+        </div>
+      </div>
+      <div class="info">
+        <strong>กรณีศึกษา Panera Bread:</strong> CEO Ronald Shaich บอกว่า "Give people something of value and they'll happily pay for it." — แม้ในเศรษฐกิจไม่แน่นอน ราคาต่ำสุดก็ไม่ใช่คุณค่าที่ดีที่สุดเสมอไป
+      </div>
+
+      <h3>2️⃣ Cost-Based Pricing</h3>
+      <p>การตั้งราคาตามต้นทุนการผลิต การจัดจำหน่าย และการขายผลิตภัณฑ์ บวกอัตราผลตอบแทนที่ยุติธรรมจากความพยายามและความเสี่ยง</p>
+
+      <h4>📦 ประเภทของต้นทุน</h4>
+      <table>
+        <tr><th>ประเภท</th><th>ลักษณะ</th></tr>
+        <tr><td><strong>Fixed costs (Overhead)</strong></td><td>ไม่ผันแปรตามระดับการผลิตหรือยอดขาย</td></tr>
+        <tr><td><strong>Variable costs</strong></td><td>ผันแปรโดยตรงตามระดับการผลิต</td></tr>
+        <tr><td><strong>Total costs</strong></td><td>ผลรวมของ fixed + variable ที่ระดับการผลิตหนึ่ง</td></tr>
+      </table>
+
+      <h4>🧮 2 ประเภท Cost-Based Pricing</h4>
+      <div class="grid">
+        <div class="grid-item">
+          <h4>Cost-Plus (Markup) Pricing</h4>
+          <p>บวก markup มาตรฐานเข้ากับต้นทุน</p>
+        </div>
+        <div class="grid-item">
+          <h4>Break-even (Target Return) Pricing</h4>
+          <p>ตั้งราคาเพื่อ break even หรือทำกำไรเป้าหมาย</p>
+        </div>
+      </div>
+
+      <div class="chart-container">
+        <h4 style="margin-bottom:12px;">Figure 9.3 — Break-Even Chart</h4>
+        <svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg">
+          <!-- Axes -->
+          <line x1="80" y1="320" x2="760" y2="320" stroke="#2c3e50" stroke-width="2"/>
+          <line x1="80" y1="40" x2="80" y2="320" stroke="#2c3e50" stroke-width="2"/>
+          <text x="20" y="35" font-family="Prompt" font-size="13" fill="#2c3e50">$M</text>
+          <text x="730" y="345" font-family="Prompt" font-size="12" fill="#2c3e50">หน่วย (พัน)</text>
+
+          <!-- Y axis labels -->
+          <text x="50" y="320" font-family="Prompt" font-size="11" fill="#7f8c8d">0</text>
+          <text x="50" y="280" font-family="Prompt" font-size="11" fill="#7f8c8d">2</text>
+          <text x="50" y="240" font-family="Prompt" font-size="11" fill="#7f8c8d">4</text>
+          <text x="50" y="200" font-family="Prompt" font-size="11" fill="#7f8c8d">6</text>
+          <text x="50" y="160" font-family="Prompt" font-size="11" fill="#7f8c8d">8</text>
+          <text x="50" y="120" font-family="Prompt" font-size="11" fill="#7f8c8d">10</text>
+          <text x="50" y="80" font-family="Prompt" font-size="11" fill="#7f8c8d">12</text>
+
+          <!-- X axis labels -->
+          <text x="200" y="340" font-family="Prompt" font-size="11" fill="#7f8c8d">200</text>
+          <text x="320" y="340" font-family="Prompt" font-size="11" fill="#7f8c8d">400</text>
+          <text x="440" y="340" font-family="Prompt" font-size="11" fill="#7f8c8d">600</text>
+          <text x="560" y="340" font-family="Prompt" font-size="11" fill="#7f8c8d">800</text>
+
+          <!-- Fixed cost line -->
+          <line x1="80" y1="200" x2="760" y2="200" stroke="#2c3e50" stroke-width="2"/>
+          <text x="100" y="195" font-family="Prompt" font-size="12" fill="#2c3e50">Fixed cost</text>
+
+          <!-- Total cost line -->
+          <line x1="80" y1="200" x2="760" y2="80" stroke="#e74c3c" stroke-width="3"/>
+          <text x="600" y="105" font-family="Prompt" font-size="14" font-weight="700" fill="#e74c3c">Total cost</text>
+
+          <!-- Total revenue line -->
+          <line x1="80" y1="320" x2="760" y2="60" stroke="#27ae60" stroke-width="3"/>
+          <text x="600" y="80" font-family="Prompt" font-size="14" font-weight="700" fill="#27ae60">Total revenue</text>
+
+          <!-- Break-even point -->
+          <circle cx="440" cy="200" r="6" fill="#f39c12"/>
+          <text x="450" y="195" font-family="Prompt" font-size="12" font-weight="700" fill="#f39c12">Break-even</text>
+
+          <!-- Target return -->
+          <line x1="640" y1="60" x2="640" y2="100" stroke="#9b59b6" stroke-width="2" stroke-dasharray="4,4"/>
+          <text x="650" y="55" font-family="Prompt" font-size="11" fill="#9b59b6">Target return</text>
+          <text x="650" y="70" font-family="Prompt" font-size="11" fill="#9b59b6">($2 million)</text>
+        </svg>
+      </div>
+
+      <h3>3️⃣ Competition-Based Pricing</h3>
+      <p>การตั้งราคาโดยอิงจากกลยุทธ์ ราคา ต้นทุน และข้อเสนอของคู่แข่ง</p>
+      <div class="info">
+        <strong>กรณีศึกษา Hot Mama:</strong> ร้านเสื้อผ้าบูติกที่ไม่สู้สงครามราคากับยักษ์ใหญ่อย่าง Macy's หรือ Kohl's แต่อาศัยบริการส่วนตัว บรรยากาศที่เป็นมิตรต่อแม่และเด็ก และพนักงานที่มีความรู้ เพื่อเปลี่ยนคุณแม่ที่เร่งรีบให้กลายเป็นลูกค้าประจำ
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>🔧 ปัจจัยอื่นๆ ที่ส่งผลต่อการตั้งราคา</h2>
+
+      <h3>🏢 ปัจจัยภายใน (Internal factors)</h3>
+      <ul>
+        <li><strong>กลยุทธ์การตลาดโดยรวม วัตถุประสงค์ และ marketing mix</strong></li>
+        <li><strong>การพิจารณาด้านองค์กร</strong> — ใครในบริษัทตั้งราคา? (บริษัทใหญ่อาจมี pricing department)</li>
+      </ul>
+      <h4>💡 Target Costing</h4>
+      <p>การตั้งราคาที่เริ่มจากราคาขายในอุดมคติ แล้วกำหนดต้นทุนที่จะรับประกันว่าราคานั้นทำได้</p>
+      <div class="info">
+        <strong>กรณี Bang & Olufsen:</strong> ผู้ผลิตอิเล็กทรอนิกส์ระดับไฮเอนด์ สร้างมูลค่าสูงเข้าไปในผลิตภัณฑ์และตั้งราคาแพงลิ่ว — ลดบทบาทของราคา ใช้ marketing mix ตัวอื่นแทน
+      </div>
+
+      <h3>🌐 ปัจจัยภายนอก (External factors)</h3>
+      <ul>
+        <li><strong>ลักษณะของตลาดและดีมานด์</strong></li>
+        <li><strong>ปัจจัยสภาพแวดล้อมอื่นๆ</strong></li>
+      </ul>
+
+      <h4>📊 ประเภทของตลาด</h4>
+      <table>
+        <tr><th>ประเภท</th><th>ลักษณะ</th></tr>
+        <tr><td>Pure competition</td><td>ผู้ขายและผู้ซื้อจำนวนมาก สินค้าเหมือนกัน</td></tr>
+        <tr><td>Monopolistic competition</td><td>ผู้ขายและผู้ซื้อจำนวนมาก สินค้าต่างกัน</td></tr>
+        <tr><td>Oligopolistic competition</td><td>ผู้ขายไม่กี่ราย แต่ละรายไวต่อกลยุทธ์ราคาคู่แข่ง</td></tr>
+        <tr><td>Pure monopoly</td><td>ผู้ขายรายเดียว</td></tr>
+      </table>
+
+      <h4>📈 Demand Curve และ Price Elasticity</h4>
+      <div class="chart-container">
+        <svg viewBox="0 0 700 280" xmlns="http://www.w3.org/2000/svg">
+          <line x1="80" y1="240" x2="640" y2="240" stroke="#2c3e50" stroke-width="2"/>
+          <line x1="80" y1="40" x2="80" y2="240" stroke="#2c3e50" stroke-width="2"/>
+          <text x="40" y="35" font-family="Prompt" font-size="13" fill="#2c3e50">Price</text>
+          <text x="600" y="265" font-family="Prompt" font-size="13" fill="#2c3e50">Quantity</text>
+
+          <!-- Demand curve (downward sloping) -->
+          <path d="M 100 60 Q 200 90 300 130 Q 450 200 620 230" stroke="#9b59b6" stroke-width="3" fill="none"/>
+
+          <!-- P1, Q1 -->
+          <circle cx="200" cy="90" r="5" fill="#e74c3c"/>
+          <line x1="80" y1="90" x2="200" y2="90" stroke="#e74c3c" stroke-width="1" stroke-dasharray="3,3"/>
+          <line x1="200" y1="90" x2="200" y2="240" stroke="#e74c3c" stroke-width="1" stroke-dasharray="3,3"/>
+          <text x="55" y="95" font-family="Prompt" font-size="13" fill="#e74c3c">P₂</text>
+          <text x="195" y="258" font-family="Prompt" font-size="13" fill="#e74c3c">Q₂</text>
+
+          <!-- P2, Q2 -->
+          <circle cx="450" cy="200" r="5" fill="#27ae60"/>
+          <line x1="80" y1="200" x2="450" y2="200" stroke="#27ae60" stroke-width="1" stroke-dasharray="3,3"/>
+          <line x1="450" y1="200" x2="450" y2="240" stroke="#27ae60" stroke-width="1" stroke-dasharray="3,3"/>
+          <text x="55" y="205" font-family="Prompt" font-size="13" fill="#27ae60">P₁</text>
+          <text x="445" y="258" font-family="Prompt" font-size="13" fill="#27ae60">Q₁</text>
+
+          <text x="500" y="80" font-family="Prompt" font-size="14" font-weight="700" fill="#9b59b6">Demand curve</text>
+        </svg>
+      </div>
+      <p>Demand Curve = แสดงจำนวนหน่วยที่ตลาดจะซื้อในช่วงเวลาหนึ่งที่ราคาต่างๆ</p>
+
+      <h4>🎯 Price Elasticity of Demand</h4>
+      <p>การวัดความไวของดีมานด์ต่อการเปลี่ยนแปลงราคา</p>
+      <div class="grid">
+        <div class="grid-item">
+          <h4>📊 Inelastic Demand</h4>
+          <p>ดีมานด์เปลี่ยนน้อยเมื่อราคาเปลี่ยนเล็กน้อย — สินค้าจำเป็น</p>
+        </div>
+        <div class="grid-item">
+          <h4>📈 Elastic Demand</h4>
+          <p>ดีมานด์เปลี่ยนมากเมื่อราคาเปลี่ยนเล็กน้อย — สินค้าฟุ่มเฟือย</p>
+        </div>
+      </div>
+      <div class="info">
+        <strong>กรณี ConAgra:</strong> เมื่อขึ้นราคา Banquet frozen dinners ยอดขายตกลงอย่างมาก CEO Gary Rodkin บอกว่า "หัวใจสำคัญคือต้องเป็น $1, ทุกอย่างอื่นไร้ความหมายเมื่อเทียบกับสิ่งนั้น"
+      </div>
+
+      <h4>💼 ผลกระทบของเศรษฐกิจ</h4>
+      <ul>
+        <li>ผู้บริโภค value-conscious มากขึ้นในช่วงเศรษฐกิจไม่ดี</li>
+        <li>บางบริษัทลดราคา หรือเสนอสินค้าราคาประหยัดมากขึ้น</li>
+        <li>บางบริษัทคงราคาเดิม แต่ปรับตำแหน่งใหม่เพื่อเสริมคุณค่า</li>
+      </ul>
+      <div class="info">
+        <strong>กรณี Whole Foods:</strong> เมื่อเศรษฐกิจตก แทนที่จะลดราคาทุกวัน Whole Foods ส่ง "value tour guides" พาลูกค้าเดินดูสินค้าราคาคุ้มค่าในร้าน — โน้มน้าวว่าตนเองคือร้านที่ราคาเข้าถึงได้
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>🆕 กลยุทธ์การตั้งราคาผลิตภัณฑ์ใหม่</h2>
+      <div class="grid">
+        <div class="grid-item">
+          <h4>🌟 Market-Skimming Pricing</h4>
+          <p>ตั้งราคาสูงสำหรับผลิตภัณฑ์ใหม่เพื่อเก็บเกี่ยวรายได้สูงสุดจากกลุ่มที่ยอมจ่ายราคาสูง — ขายน้อย แต่กำไรต่อหน่วยสูง</p>
+          <h4 style="margin-top:12px;">เมื่อใช้?</h4>
+          <ul style="font-size:0.9rem;">
+            <li>คุณภาพและภาพลักษณ์รองรับราคาสูง</li>
+            <li>ต้นทุนผลิตปริมาณน้อยไม่สูงเกินไป</li>
+            <li>คู่แข่งยังเข้าตลาดและตัดราคาได้ยาก</li>
+          </ul>
+        </div>
+        <div class="grid-item">
+          <h4>🎯 Market-Penetration Pricing</h4>
+          <p>ตั้งราคาต่ำเพื่อดึงดูดผู้ซื้อจำนวนมากและส่วนแบ่งตลาดที่ใหญ่</p>
+          <h4 style="margin-top:12px;">เมื่อใช้?</h4>
+          <ul style="font-size:0.9rem;">
+            <li>ตลาดไวต่อราคา ราคาต่ำสร้างการเติบโต</li>
+            <li>ต้นทุนผลิตและจัดจำหน่ายลดลงเมื่อปริมาณเพิ่ม</li>
+            <li>ราคาต่ำกีดกันคู่แข่งและบริษัทรักษาตำแหน่งราคาต่ำได้</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>📦 Product Mix Pricing Strategies</h2>
+      <div class="grid">
+        <div class="grid-item">
+          <h4>📏 Product Line Pricing</h4>
+          <p>ตั้งราคาเป็นขั้นบันไดในแต่ละผลิตภัณฑ์ในไลน์ ตามต้นทุน คุณค่าที่ลูกค้ารับรู้ และราคาคู่แข่ง</p>
+        </div>
+        <div class="grid-item">
+          <h4>➕ Optional Product Pricing</h4>
+          <p>ตั้งราคาผลิตภัณฑ์เสริมที่ขายควบคู่กับสินค้าหลัก</p>
+        </div>
+        <div class="grid-item">
+          <h4>🔗 Captive Product Pricing</h4>
+          <p>ตั้งราคาสินค้าที่ต้องใช้กับสินค้าหลัก (เช่น หมึกพิมพ์กับเครื่องพิมพ์)</p>
+        </div>
+        <div class="grid-item">
+          <h4>♻️ By-Product Pricing</h4>
+          <p>ตั้งราคาผลพลอยได้เพื่อให้ราคาสินค้าหลักแข่งขันได้</p>
+        </div>
+        <div class="grid-item">
+          <h4>📦 Product Bundle Pricing</h4>
+          <p>รวมผลิตภัณฑ์หลายชิ้นและขายเป็นชุดในราคาที่ลด</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>🎛️ Price Adjustment Strategies — กลยุทธ์การปรับราคา</h2>
+
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <span>💸 1. Discount &amp; Allowance Pricing</span><span class="arrow">▼</span>
+        </div>
+        <div class="accordion-body">
+          <p><strong>Discount</strong> = การลดราคาแบบตรงไปตรงมาบนการซื้อในช่วงเวลาที่กำหนดหรือในปริมาณมาก</p>
+          <h4>Forms:</h4>
+          <ul>
+            <li><strong>Cash discount:</strong> ส่วนลดเงินสด</li>
+            <li><strong>Quantity discount:</strong> ส่วนลดปริมาณ</li>
+            <li><strong>Functional discount:</strong> ส่วนลดตามหน้าที่ (ให้ตัวกลาง)</li>
+            <li><strong>Seasonal discount:</strong> ส่วนลดตามฤดูกาล</li>
+          </ul>
+          <p><strong>Allowance</strong> = ลดจากราคา list สำหรับการกระทำของผู้ซื้อ</p>
+          <ul>
+            <li><strong>Trade-in allowances:</strong> ลดเมื่อนำของเก่ามาแลก</li>
+            <li><strong>Promotional allowances:</strong> จ่ายเพื่อให้ตัวกลางช่วยโปรโมต</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <span>👥 2. Segmented Pricing</span><span class="arrow">▼</span>
+        </div>
+        <div class="accordion-body">
+          <p>ขายสินค้าหรือบริการในราคา 2 ราคาขึ้นไป โดยที่ความแตกต่างของราคาไม่ได้มาจากความแตกต่างของต้นทุน</p>
+          <h4>Forms:</h4>
+          <ul>
+            <li><strong>Customer-segment pricing:</strong> ตามกลุ่มลูกค้า (เช่น นักเรียน, ผู้สูงอายุ)</li>
+            <li><strong>Product-form pricing:</strong> ตามรูปแบบผลิตภัณฑ์</li>
+            <li><strong>Location-based pricing:</strong> ตามสถานที่</li>
+            <li><strong>Time-based pricing:</strong> ตามเวลา</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <span>🧠 3. Psychological Pricing</span><span class="arrow">▼</span>
+        </div>
+        <div class="accordion-body">
+          <p>การตั้งราคาที่คำนึงถึงจิตวิทยาของราคา ไม่ใช่เพียงแค่เศรษฐศาสตร์ — ราคาบ่งบอกบางอย่างเกี่ยวกับสินค้า</p>
+          <h4>Reference Pricing</h4>
+          <p>ราคาที่ผู้ซื้อจดจำในใจและใช้อ้างอิงเมื่อดูผลิตภัณฑ์</p>
+          <p style="margin-top:8px;"><em>เช่น $9.99 ดูเหมือนถูกกว่า $10 มาก แม้แตกต่างเพียง 1 cent</em></p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <span>🎉 4. Promotional Pricing</span><span class="arrow">▼</span>
+        </div>
+        <div class="accordion-body">
+          <p>การตั้งราคาเพื่อโปรโมต — สร้างความตื่นเต้นและความเร่งด่วนในการซื้อ</p>
+          <ul>
+            <li>Discounts (ส่วนลด)</li>
+            <li>Special-event pricing (ราคาในงานพิเศษ)</li>
+            <li>Cash rebates (เงินคืน)</li>
+            <li>Low-interest financing (อัตราดอกเบี้ยต่ำ)</li>
+            <li>Longer warranties (รับประกันยาวขึ้น)</li>
+            <li>Free maintenance (บำรุงรักษาฟรี)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <span>🌍 5. Geographical Pricing</span><span class="arrow">▼</span>
+        </div>
+        <div class="accordion-body">
+          <ul>
+            <li><strong>FOB-origin pricing:</strong> ลูกค้าจ่ายค่าขนส่งจากจุดต้นทาง</li>
+            <li><strong>Uniform-delivered pricing:</strong> ราคาเดียวกันรวมค่าส่งสำหรับทุกที่</li>
+            <li><strong>Zone pricing:</strong> ราคาตามโซน</li>
+            <li><strong>Basing-point pricing:</strong> เลือกเมืองอ้างอิงในการคิดค่าขนส่ง</li>
+            <li><strong>Freight-absorption pricing:</strong> ผู้ขายดูดซับค่าขนส่งเอง</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <span>⚡ 6. Dynamic Pricing</span><span class="arrow">▼</span>
+        </div>
+        <div class="accordion-body">
+          <p>ปรับราคาอย่างต่อเนื่องเพื่อให้เข้ากับลักษณะและความต้องการของลูกค้าและสถานการณ์ — แพร่หลายบนออนไลน์</p>
+          <div class="info">
+            <strong>กรณี Priceline.com:</strong> ลูกค้า "ตั้งราคาเอง" — เปิดยุคใหม่ของราคาที่ลื่นไหล
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <span>🌎 7. International Pricing</span><span class="arrow">▼</span>
+        </div>
+        <div class="accordion-body">
+          <p>ราคาที่บริษัทควรเรียกในแต่ละประเทศขึ้นกับสภาพเศรษฐกิจ กฎหมายและกฎระเบียบ สถานการณ์การแข่งขัน เป็นต้น</p>
+          <div class="info">
+            <strong>กรณี Unilever:</strong> ในประเทศกำลังพัฒนา พัฒนาบรรจุภัณฑ์เล็กลง ราคาประหยัดกว่า เพื่อให้แบรนด์พรีเมียมเข้าถึงลูกค้าที่มีกำลังซื้อจำกัด
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>🔄 การเปลี่ยนแปลงราคา (Price Changes)</h2>
+
+      <h3>📉 การลดราคา (Initiating Price Cuts)</h3>
+      <h4>เหตุผล:</h4>
+      <ul>
+        <li>กำลังการผลิตเกิน (Excess capacity)</li>
+        <li>ดีมานด์ตกลงท่ามกลางการแข่งขันที่รุนแรงหรือเศรษฐกิจอ่อนแอ</li>
+        <li>ความพยายามครองตลาดผ่านต้นทุนที่ต่ำกว่า</li>
+      </ul>
+
+      <h3>📈 การขึ้นราคา (Price Increases)</h3>
+      <p>สามารถปรับปรุงผลกำไรอย่างมาก อาจเริ่มจาก:</p>
+      <ul>
+        <li><strong>Cost inflation:</strong> ต้นทุนเพิ่มขึ้น</li>
+        <li><strong>Overdemand:</strong> ดีมานด์ล้นหลาม</li>
+      </ul>
+      <div class="warning">
+        <strong>ระวัง!</strong> เมื่อราคาน้ำมันเพิ่มขึ้นอย่างรวดเร็ว ผู้บริโภคที่โกรธมักโทษบริษัทน้ำมันใหญ่ๆ ว่ารวยขึ้นจากการเอาเปรียบลูกค้า
+      </div>
+
+      <h3>🎯 Figure 9.5 — การประเมินและตอบสนองต่อการเปลี่ยนแปลงราคาของคู่แข่ง</h3>
+      <div class="chart-container">
+        <svg viewBox="0 0 900 460" xmlns="http://www.w3.org/2000/svg">
+          <!-- Has competitor cut price? -->
+          <rect x="20" y="80" width="180" height="60" fill="white" stroke="#2c3e50" stroke-width="2" rx="6"/>
+          <text x="110" y="105" font-family="Prompt" font-size="13" fill="#2c3e50" text-anchor="middle">Has competitor</text>
+          <text x="110" y="125" font-family="Prompt" font-size="13" fill="#2c3e50" text-anchor="middle">cut price?</text>
+
+          <!-- No -> Hold -->
+          <text x="220" y="100" font-family="Prompt" font-size="12" font-weight="700" fill="#e74c3c">No</text>
+          <line x1="200" y1="110" x2="638" y2="110" stroke="#e74c3c" stroke-width="2" marker-end="url(#arrRed)"/>
+          <rect x="640" y="80" width="220" height="60" fill="#fee" stroke="#e74c3c" stroke-width="2" rx="6"/>
+          <text x="750" y="105" font-family="Prompt" font-size="12" fill="#2c3e50" text-anchor="middle">Hold current price;</text>
+          <text x="750" y="125" font-family="Prompt" font-size="12" fill="#2c3e50" text-anchor="middle">monitor competitor</text>
+
+          <!-- Yes -> Will lower price affect us? -->
+          <text x="110" y="160" font-family="Prompt" font-size="12" font-weight="700" fill="#27ae60">Yes</text>
+          <line x1="110" y1="140" x2="110" y2="180" stroke="#27ae60" stroke-width="2" marker-end="url(#arr)"/>
+          <rect x="20" y="180" width="180" height="70" fill="white" stroke="#2c3e50" stroke-width="2" rx="6"/>
+          <text x="110" y="205" font-family="Prompt" font-size="12" fill="#2c3e50" text-anchor="middle">Will lower price</text>
+          <text x="110" y="222" font-family="Prompt" font-size="12" fill="#2c3e50" text-anchor="middle">negatively affect</text>
+          <text x="110" y="239" font-family="Prompt" font-size="12" fill="#2c3e50" text-anchor="middle">market share &amp; profits?</text>
+
+          <!-- No -> Hold -->
+          <text x="220" y="208" font-family="Prompt" font-size="12" font-weight="700" fill="#e74c3c">No</text>
+          <line x1="200" y1="215" x2="638" y2="215" stroke="#e74c3c" stroke-width="2" stroke-dasharray="4,4"/>
+          <line x1="640" y1="215" x2="640" y2="142" stroke="#e74c3c" stroke-width="2" marker-end="url(#arrRed)"/>
+
+          <!-- Yes -> Can/should action be taken? -->
+          <text x="110" y="270" font-family="Prompt" font-size="12" font-weight="700" fill="#27ae60">Yes</text>
+          <line x1="110" y1="250" x2="110" y2="290" stroke="#27ae60" stroke-width="2" marker-end="url(#arr)"/>
+          <rect x="20" y="290" width="180" height="60" fill="white" stroke="#2c3e50" stroke-width="2" rx="6"/>
+          <text x="110" y="315" font-family="Prompt" font-size="12" fill="#2c3e50" text-anchor="middle">Can/should</text>
+          <text x="110" y="335" font-family="Prompt" font-size="12" fill="#2c3e50" text-anchor="middle">action be taken?</text>
+
+          <!-- No -> Hold -->
+          <text x="220" y="313" font-family="Prompt" font-size="12" font-weight="700" fill="#e74c3c">No</text>
+          <!-- No from box3 -> Improve quality (dashed red) -->
+          <line x1="200" y1="320" x2="398" y2="320" stroke="#e74c3c" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrRed)"/>
+
+          <!-- Yes -> 4 actions -->
+          <line x1="200" y1="305" x2="310" y2="305" stroke="#27ae60" stroke-width="2"/>
+          <line x1="310" y1="200" x2="310" y2="385" stroke="#27ae60" stroke-width="2"/>
+          <line x1="310" y1="200" x2="398" y2="200" stroke="#27ae60" stroke-width="2" marker-end="url(#arr)"/>
+          <line x1="310" y1="260" x2="398" y2="260" stroke="#27ae60" stroke-width="2" marker-end="url(#arr)"/>
+          <line x1="310" y1="385" x2="398" y2="385" stroke="#27ae60" stroke-width="2" marker-end="url(#arr)"/>
+
+          <rect x="400" y="180" width="200" height="40" fill="#e8f0fe" stroke="#3498db" stroke-width="2" rx="6"/>
+          <text x="500" y="205" font-family="Prompt" font-size="12" fill="#2c3e50" text-anchor="middle">Reduce price</text>
+
+          <rect x="400" y="240" width="200" height="40" fill="#e8f0fe" stroke="#3498db" stroke-width="2" rx="6"/>
+          <text x="500" y="265" font-family="Prompt" font-size="12" fill="#2c3e50" text-anchor="middle">Raise perceived value</text>
+
+          <rect x="400" y="300" width="200" height="40" fill="#e8f0fe" stroke="#3498db" stroke-width="2" rx="6"/>
+          <text x="500" y="318" font-family="Prompt" font-size="12" fill="#2c3e50" text-anchor="middle">Improve quality &amp;</text>
+          <text x="500" y="334" font-family="Prompt" font-size="12" fill="#2c3e50" text-anchor="middle">increase price</text>
+
+          <rect x="400" y="360" width="200" height="40" fill="#e8f0fe" stroke="#3498db" stroke-width="2" rx="6"/>
+          <text x="500" y="385" font-family="Prompt" font-size="12" fill="#2c3e50" text-anchor="middle">Launch "fighter brand"</text>
+
+          <defs>
+            <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+              <path d="M0,0 L10,5 L0,10 z" fill="#27ae60"/>
+            </marker>
+            <marker id="arrRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+              <path d="M0,0 L10,5 L0,10 z" fill="#e74c3c"/>
+            </marker>
+          </defs>
+        </svg>
+      </div>
+
+      <div class="info">
+        <strong>กรณี Fighter Brand — Starbucks:</strong> วาง Seattle's Best Coffee เป็นแบรนด์ "mass-premium" เพื่อแข่งขันโดยตรงกับ Dunkin' Donuts, McDonald's และคู่แข่งราคาต่ำอื่นๆ
+      </div>
+    </div>
+
+    <div class="quiz-box">
+      <h3>🧠 ทดสอบความเข้าใจ — บทที่ 9</h3>
+      <p><strong>คำถาม:</strong> Apple เปิดตัว iPhone รุ่นใหม่ในราคาแพง เพื่อเก็บเกี่ยวกำไรจากกลุ่มผู้ใช้ที่ยอมจ่ายสูงก่อน นี่คือกลยุทธ์ใด?</p>
+      <div class="quiz-options">
+        <button class="quiz-option" onclick="checkAnswer(this, false)">A. Market-Penetration Pricing</button>
+        <button class="quiz-option" onclick="checkAnswer(this, true)">B. Market-Skimming Pricing</button>
+        <button class="quiz-option" onclick="checkAnswer(this, false)">C. Cost-Plus Pricing</button>
+        <button class="quiz-option" onclick="checkAnswer(this, false)">D. Captive Product Pricing</button>
+      </div>
+      <div class="quiz-feedback"></div>
+    </div>
+
+  </div>
+
+  <!-- ============ CHAPTER 10 ============ -->
+  <div id="tab-10" class="tab-content">
+
+    <div class="intro-box">
+      <h2>บทที่ 10: ช่องทางการตลาด — การส่งมอบมูลค่าให้ลูกค้า</h2>
+      <p style="margin-top:12px;">เรียนรู้เกี่ยวกับ Supply Chain, Marketing Channels, ระบบช่องทางทางตลาด (VMS, HMS, Multichannel), การออกแบบและบริหารช่องทาง, และโลจิสติกส์</p>
+    </div>
+
+    <div class="card">
+      <h2>🎯 วัตถุประสงค์การเรียนรู้</h2>
+      <ul>
+        <li>อธิบายเหตุผลที่บริษัทใช้ marketing channels และอภิปรายหน้าที่ของช่องทาง</li>
+        <li>อภิปรายการที่สมาชิกในช่องทางทำงานร่วมกัน เพื่อทำงานของช่องทาง</li>
+        <li>ระบุทางเลือกของช่องทางที่บริษัทมี</li>
+        <li>อธิบายวิธีคัดเลือก สร้างแรงจูงใจ และประเมินสมาชิกของช่องทาง</li>
+        <li>อภิปรายลักษณะและความสำคัญของโลจิสติกส์การตลาดและการบริหารห่วงโซ่อุปทานแบบบูรณาการ</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>🚗 กรณีศึกษา: Enterprise — ทิ้งคู่แข่งรถเช่าไว้ในกระจกหลังรถ</h2>
+      <ul>
+        <li>Enterprise Holdings ครองตลาดรถเช่ารวม <strong>48%</strong> โดย Hertz เป็นที่สองห่างมากที่ <strong>20%</strong></li>
+        <li>ต่างจากคู่แข่ง Enterprise มุ่งเน้นที่บริการนอกสนามบิน (off-airport)</li>
+        <li>เป็นผู้นำอุตสาหกรรมด้วย: ราคาที่ดีกว่า, การตลาดที่ดีกว่า, และกลยุทธ์การจัดจำหน่ายที่เน้นลูกค้า</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>🔗 Supply Chain และ Value Delivery Network</h2>
+      <p>การผลิตและจัดทำผลิตภัณฑ์ให้พร้อมแก่ผู้ซื้อต้องอาศัยการสร้างความสัมพันธ์ทั้ง upstream และ downstream</p>
+
+      <div class="grid">
+        <div class="grid-item">
+          <h4>⬆️ Upstream</h4>
+          <p>บริษัทที่จัดหาวัตถุดิบ ส่วนประกอบ ชิ้นส่วน และอื่นๆ ที่จำเป็นในการสร้างผลิตภัณฑ์หรือบริการ</p>
+        </div>
+        <div class="grid-item">
+          <h4>⬇️ Downstream</h4>
+          <p>พันธมิตรในช่องทางการตลาดที่เชื่อมต่อบริษัทกับลูกค้า</p>
+        </div>
+      </div>
+
+      <div class="info">
+        <strong>Value Delivery Network:</strong> เครือข่ายที่ประกอบด้วยบริษัท ซัพพลายเออร์ ตัวแทนจำหน่าย และลูกค้า ที่ร่วมมือกันเพื่อช่วยให้ทั้งระบบส่งมอบคุณค่าให้ลูกค้าได้ดีขึ้น
+        <p style="margin-top:8px;"><em>เช่น Honda จัดการเครือข่ายของพนักงานหลายพันคน + ซัพพลายเออร์และตัวแทนจำหน่ายภายนอก</em></p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>📡 Marketing Channels (Distribution Channels)</h2>
+      <p><strong>Marketing Channel</strong> = ชุดขององค์กรอิสระที่ช่วยทำให้ผลิตภัณฑ์หรือบริการพร้อมใช้สำหรับผู้บริโภคหรือผู้ใช้ทางธุรกิจ</p>
+      <p>การตัดสินใจเกี่ยวกับช่องทางการตลาด:</p>
+      <ul>
+        <li>ส่งผลต่อการตัดสินใจการตลาดอื่นๆ เช่น ราคาหรือการออกแบบผลิตภัณฑ์</li>
+        <li>สามารถนำไปสู่ <strong>ความได้เปรียบทางการแข่งขัน</strong></li>
+      </ul>
+
+      <h3>📊 Figure 10.1 — ผู้จัดจำหน่ายลดจำนวนการติดต่อ</h3>
+      <div class="chart-container">
+        <svg viewBox="0 0 800 320" xmlns="http://www.w3.org/2000/svg">
+          <!-- WITHOUT distributor (left) -->
+          <text x="160" y="30" font-family="Prompt" font-size="14" font-weight="700" fill="#e74c3c" text-anchor="middle">ไม่มี Distributor (9 contacts)</text>
+
+          <!-- 3 manufacturers -->
+          <rect x="40" y="60" width="80" height="40" fill="white" stroke="#2c3e50" stroke-width="2" rx="4"/>
+          <text x="80" y="85" font-family="Prompt" font-size="11" fill="#2c3e50" text-anchor="middle">Mfr 1</text>
+          <rect x="40" y="140" width="80" height="40" fill="white" stroke="#2c3e50" stroke-width="2" rx="4"/>
+          <text x="80" y="165" font-family="Prompt" font-size="11" fill="#2c3e50" text-anchor="middle">Mfr 2</text>
+          <rect x="40" y="220" width="80" height="40" fill="white" stroke="#2c3e50" stroke-width="2" rx="4"/>
+          <text x="80" y="245" font-family="Prompt" font-size="11" fill="#2c3e50" text-anchor="middle">Mfr 3</text>
+
+          <!-- 3 customers -->
+          <rect x="240" y="60" width="80" height="40" fill="white" stroke="#2c3e50" stroke-width="2" rx="4"/>
+          <text x="280" y="85" font-family="Prompt" font-size="11" fill="#2c3e50" text-anchor="middle">Cust 1</text>
+          <rect x="240" y="140" width="80" height="40" fill="white" stroke="#2c3e50" stroke-width="2" rx="4"/>
+          <text x="280" y="165" font-family="Prompt" font-size="11" fill="#2c3e50" text-anchor="middle">Cust 2</text>
+          <rect x="240" y="220" width="80" height="40" fill="white" stroke="#2c3e50" stroke-width="2" rx="4"/>
+          <text x="280" y="245" font-family="Prompt" font-size="11" fill="#2c3e50" text-anchor="middle">Cust 3</text>
+
+          <!-- 9 lines -->
+          <line x1="120" y1="80" x2="240" y2="80" stroke="#e74c3c" stroke-width="1.5"/>
+          <line x1="120" y1="80" x2="240" y2="160" stroke="#e74c3c" stroke-width="1.5"/>
+          <line x1="120" y1="80" x2="240" y2="240" stroke="#e74c3c" stroke-width="1.5"/>
+          <line x1="120" y1="160" x2="240" y2="80" stroke="#e74c3c" stroke-width="1.5"/>
+          <line x1="120" y1="160" x2="240" y2="160" stroke="#e74c3c" stroke-width="1.5"/>
+          <line x1="120" y1="160" x2="240" y2="240" stroke="#e74c3c" stroke-width="1.5"/>
+          <line x1="120" y1="240" x2="240" y2="80" stroke="#e74c3c" stroke-width="1.5"/>
+          <line x1="120" y1="240" x2="240" y2="160" stroke="#e74c3c" stroke-width="1.5"/>
+          <line x1="120" y1="240" x2="240" y2="240" stroke="#e74c3c" stroke-width="1.5"/>
+
+          <!-- WITH distributor (right) -->
+          <text x="600" y="30" font-family="Prompt" font-size="14" font-weight="700" fill="#27ae60" text-anchor="middle">มี Distributor (6 contacts)</text>
+
+          <rect x="440" y="60" width="80" height="40" fill="white" stroke="#2c3e50" stroke-width="2" rx="4"/>
+          <text x="480" y="85" font-family="Prompt" font-size="11" fill="#2c3e50" text-anchor="middle">Mfr 1</text>
+          <rect x="440" y="140" width="80" height="40" fill="white" stroke="#2c3e50" stroke-width="2" rx="4"/>
+          <text x="480" y="165" font-family="Prompt" font-size="11" fill="#2c3e50" text-anchor="middle">Mfr 2</text>
+          <rect x="440" y="220" width="80" height="40" fill="white" stroke="#2c3e50" stroke-width="2" rx="4"/>
+          <text x="480" y="245" font-family="Prompt" font-size="11" fill="#2c3e50" text-anchor="middle">Mfr 3</text>
+
+          <rect x="580" y="140" width="100" height="40" fill="#f39c12" stroke="#e67e22" stroke-width="2" rx="4"/>
+          <text x="630" y="165" font-family="Prompt" font-size="11" font-weight="700" fill="white" text-anchor="middle">Distributor</text>
+
+          <rect x="720" y="60" width="60" height="40" fill="white" stroke="#2c3e50" stroke-width="2" rx="4"/>
+          <text x="750" y="85" font-family="Prompt" font-size="11" fill="#2c3e50" text-anchor="middle">C1</text>
+          <rect x="720" y="140" width="60" height="40" fill="white" stroke="#2c3e50" stroke-width="2" rx="4"/>
+          <text x="750" y="165" font-family="Prompt" font-size="11" fill="#2c3e50" text-anchor="middle">C2</text>
+          <rect x="720" y="220" width="60" height="40" fill="white" stroke="#2c3e50" stroke-width="2" rx="4"/>
+          <text x="750" y="245" font-family="Prompt" font-size="11" fill="#2c3e50" text-anchor="middle">C3</text>
+
+          <line x1="520" y1="80" x2="580" y2="155" stroke="#27ae60" stroke-width="2"/>
+          <line x1="520" y1="160" x2="580" y2="160" stroke="#27ae60" stroke-width="2"/>
+          <line x1="520" y1="240" x2="580" y2="170" stroke="#27ae60" stroke-width="2"/>
+          <line x1="680" y1="155" x2="720" y2="80" stroke="#27ae60" stroke-width="2"/>
+          <line x1="680" y1="160" x2="720" y2="160" stroke="#27ae60" stroke-width="2"/>
+          <line x1="680" y1="170" x2="720" y2="240" stroke="#27ae60" stroke-width="2"/>
+
+          <text x="160" y="295" font-family="Prompt" font-size="12" fill="#e74c3c" text-anchor="middle">3 × 3 = 9 ติดต่อ</text>
+          <text x="600" y="295" font-family="Prompt" font-size="12" fill="#27ae60" text-anchor="middle">3 + 3 = 6 ติดต่อ</text>
+        </svg>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>💎 ทำไมเราต้องใช้ Channel Members?</h2>
+      <p>การใช้คนกลางทำให้สินค้าถึงตลาดเป้าหมายได้ <strong>มีประสิทธิภาพ</strong> มากขึ้น เพราะ Channel Members สามารถนำเสนอ:</p>
+      <ul>
+        <li><strong>Contacts and experience</strong> — การติดต่อและประสบการณ์</li>
+        <li><strong>Specialization</strong> — ความเชี่ยวชาญเฉพาะ</li>
+        <li><strong>Scale of operation</strong> — ขนาดการดำเนินงาน</li>
+      </ul>
+
+      <h3>🎯 หน้าที่หลักของ Channel Members</h3>
+      <div class="grid">
+        <div class="grid-item">
+          <h4>📤 Transaction Completion (จบการซื้อขาย)</h4>
+          <ul style="font-size:0.9rem;">
+            <li><strong>Information</strong> — รวบรวมข้อมูล</li>
+            <li><strong>Promotion</strong> — โฆษณาส่งเสริม</li>
+            <li><strong>Contact</strong> — สร้างผู้ซื้อที่อาจเกิดขึ้น</li>
+            <li><strong>Matching</strong> — จับคู่ข้อเสนอกับความต้องการ</li>
+            <li><strong>Negotiation</strong> — ตกลงราคา</li>
+          </ul>
+        </div>
+        <div class="grid-item">
+          <h4>📥 Transaction Fulfillment (เติมเต็มการซื้อขาย)</h4>
+          <ul style="font-size:0.9rem;">
+            <li><strong>Physical distribution</strong> — เคลื่อนย้ายสินค้า</li>
+            <li><strong>Financing</strong> — จัดหาทุน</li>
+            <li><strong>Risk taking</strong> — รับความเสี่ยง</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>🛤️ ระดับและประเภทของ Channels</h2>
+
+      <div class="grid">
+        <div class="grid-item">
+          <h4>📏 Channel Level</h4>
+          <p>ชั้นของคนกลางที่ทำงานในการนำสินค้าและสิทธิ์ความเป็นเจ้าของไปสู่ผู้ซื้อสุดท้าย</p>
+        </div>
+        <div class="grid-item">
+          <h4>🎯 Direct Marketing Channel</h4>
+          <p>ช่องทางที่ <strong>ไม่มี</strong> ระดับคนกลาง</p>
+        </div>
+        <div class="grid-item">
+          <h4>🔁 Indirect Marketing Channel</h4>
+          <p>ช่องทางที่มีคนกลางหนึ่งระดับขึ้นไป</p>
+        </div>
+      </div>
+
+      <h3>📋 Figure 10.2 — ช่องทางผู้บริโภคและธุรกิจ</h3>
+      <h4>A. ช่องทางการตลาดของผู้บริโภค</h4>
+      <div class="channel-diagram">
+        <div class="channel-node" style="background:#fff8e7;"><strong>Channel 1:</strong></div>
+        <div class="channel-node">Producer</div><span class="channel-arrow">→</span><div class="channel-node">Consumer</div>
+      </div>
+      <div class="channel-diagram">
+        <div class="channel-node" style="background:#fff8e7;"><strong>Channel 2:</strong></div>
+        <div class="channel-node">Producer</div><span class="channel-arrow">→</span><div class="channel-node">Retailer</div><span class="channel-arrow">→</span><div class="channel-node">Consumer</div>
+      </div>
+      <div class="channel-diagram">
+        <div class="channel-node" style="background:#fff8e7;"><strong>Channel 3:</strong></div>
+        <div class="channel-node">Producer</div><span class="channel-arrow">→</span><div class="channel-node">Wholesaler</div><span class="channel-arrow">→</span><div class="channel-node">Retailer</div><span class="channel-arrow">→</span><div class="channel-node">Consumer</div>
+      </div>
+
+      <h4>B. ช่องทางการตลาดธุรกิจ</h4>
+      <div class="channel-diagram">
+        <div class="channel-node" style="background:#fff8e7;"><strong>Channel 1:</strong></div>
+        <div class="channel-node">Producer</div><span class="channel-arrow">→</span><div class="channel-node">Business Customer</div>
+      </div>
+      <div class="channel-diagram">
+        <div class="channel-node" style="background:#fff8e7;"><strong>Channel 2:</strong></div>
+        <div class="channel-node">Producer</div><span class="channel-arrow">→</span><div class="channel-node">Business Distributor</div><span class="channel-arrow">→</span><div class="channel-node">Business Customer</div>
+      </div>
+      <div class="channel-diagram">
+        <div class="channel-node" style="background:#fff8e7;"><strong>Channel 3:</strong></div>
+        <div class="channel-node">Producer</div><span class="channel-arrow">→</span><div class="channel-node">Mfr Sales Branch</div><span class="channel-arrow">→</span><div class="channel-node">Distributor</div><span class="channel-arrow">→</span><div class="channel-node">Business Customer</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>⚔️ Channel Behavior, Conflict และ Organization</h2>
+      <p>ช่องทางจะมีประสิทธิภาพสูงสุดเมื่อ:</p>
+      <ul>
+        <li>สมาชิกแต่ละคนได้รับมอบหมายงานที่ตนทำได้ดีที่สุด</li>
+        <li>สมาชิกทุกคนร่วมมือกันบรรลุเป้าหมายโดยรวมของช่องทาง</li>
+        <li>ความสำเร็จของสมาชิกแต่ละคนขึ้นกับความสำเร็จของทั้งช่องทาง</li>
+      </ul>
+
+      <h3>⚡ Channel Conflict</h3>
+      <p>ความขัดแย้งระหว่างสมาชิกเกี่ยวกับเป้าหมาย หน้าที่ และผลตอบแทน — ใครควรทำอะไรเพื่อรางวัลอะไร</p>
+      <div class="grid">
+        <div class="grid-item">
+          <h4>↔️ Horizontal Conflict</h4>
+          <p>เกิดระหว่างบริษัทในระดับเดียวกันของช่องทาง <em>(เช่น dealer A vs dealer B ของแบรนด์เดียวกัน)</em></p>
+        </div>
+        <div class="grid-item">
+          <h4>↕️ Vertical Conflict</h4>
+          <p>เกิดระหว่างระดับที่ต่างกันในช่องทางเดียวกัน <em>(เช่น แบรนด์ vs แฟรนไชส์)</em></p>
+        </div>
+      </div>
+      <div class="warning">
+        <strong>กรณี Burger King:</strong> มีความขัดแย้งกับแฟรนไชส์อย่างต่อเนื่องเรื่องเนื้อหาโฆษณา รวมถึงราคาของชีสเบอร์เกอร์
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>🏗️ ระบบช่องทางการตลาด</h2>
+
+      <h3>📜 1. Conventional Distribution Channel</h3>
+      <p>ช่องทางที่ประกอบด้วย Producer, Wholesaler, Retailer ที่เป็นอิสระต่อกัน แต่ละรายเป็นธุรกิจแยกกันที่พยายามเพิ่มกำไรของตัวเองสูงสุด <strong>แม้ว่าจะกระทบกำไรของระบบโดยรวม</strong></p>
+
+      <h3>🤝 2. Vertical Marketing System (VMS)</h3>
+      <p>โครงสร้างช่องทางที่ Producer, Wholesaler, Retailer ทำงานเป็นระบบเดียวกัน — สมาชิกหนึ่งเป็นเจ้าของอีกฝ่าย, มีสัญญากัน, หรือมีอำนาจมากพอที่จะทำให้ทุกคนร่วมมือกัน</p>
+
+      <h4>3 ประเภทของ VMS</h4>
+      <div class="grid">
+        <div class="grid-item">
+          <h4>🏢 Corporate VMS</h4>
+          <p>รวมขั้นตอนการผลิตและจัดจำหน่ายภายใต้ความเป็นเจ้าของเดียว ผู้นำผ่านความเป็นเจ้าของร่วม</p>
+        </div>
+        <div class="grid-item">
+          <h4>📋 Contractual VMS</h4>
+          <p>บริษัทอิสระในระดับต่างๆ ของการผลิตและจัดจำหน่ายร่วมมือกันผ่านสัญญา</p>
+        </div>
+        <div class="grid-item">
+          <h4>👑 Administered VMS</h4>
+          <p>ประสานขั้นตอนผ่านขนาดและอำนาจของฝ่ายใดฝ่ายหนึ่ง</p>
+        </div>
+      </div>
+
+      <h4>🍔 Franchising Systems</h4>
+      <p>VMS แบบ Contractual ที่สมาชิก (franchisor) เชื่อมโยงหลายขั้นตอนของกระบวนการผลิต-จัดจำหน่าย</p>
+      <p style="margin-top:8px;"><strong>3 ประเภท:</strong></p>
+      <ul>
+        <li>Manufacturer-sponsored retailer franchise</li>
+        <li>Manufacturer-sponsored wholesaler franchise</li>
+        <li>Service-firm sponsored retailer franchise</li>
+      </ul>
+
+      <h3>🤝 3. Horizontal Marketing System (HMS)</h3>
+      <p>บริษัทตั้งแต่ 2 บริษัทขึ้นไปในระดับเดียวกันร่วมมือกันเพื่อใช้โอกาสทางการตลาดใหม่</p>
+      <div class="info">
+        <strong>กรณี McDonald's:</strong> ตั้งร้าน "express" ในห้าง Walmart
+      </div>
+
+      <h3>🌐 4. Multichannel Distribution System</h3>
+      <p>บริษัทเดียวตั้งช่องทาง 2 ช่องทางขึ้นไปเพื่อเข้าถึงลูกค้าหนึ่งกลุ่มหรือหลายกลุ่ม</p>
+      <ul>
+        <li>ช่องใหม่แต่ละช่องเพิ่มยอดขายและการครอบคลุมตลาด</li>
+        <li>ช่วยปรับผลิตภัณฑ์/บริการให้เหมาะกับกลุ่มลูกค้าที่หลากหลาย</li>
+        <li><strong>ควบคุมยาก;</strong> อาจสร้างความขัดแย้ง</li>
+      </ul>
+
+      <h3>✂️ Disintermediation (การตัดคนกลาง)</h3>
+      <p>เกิดเมื่อผู้ผลิตสินค้าและบริการตัดคนกลาง หรือคนกลางใหม่เข้ามาแทนที่คนกลางแบบเดิม</p>
+      <div class="info">
+        <strong>กรณี Netflix:</strong> เนื้อหาออนไลน์ท้าทายโมเดลเช่า DVD ของ Netflix → Netflix เปลี่ยนไปใช้บริการสตรีมมิ่งแบบ subscription
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>🎨 Channel Design Decisions — การออกแบบช่องทาง</h2>
+      <p>การออกแบบช่องทางการตลาดที่มีประสิทธิภาพ ทำได้โดย:</p>
+
+      <ol style="margin-left:24px;">
+        <li><strong>วิเคราะห์ความต้องการของผู้บริโภค</strong>
+          <ul>
+            <li>หาว่าลูกค้าเป้าหมายต้องการอะไรจากช่องทาง</li>
+            <li>สมดุลความต้องการกับต้นทุนและความต้องการในการตั้งราคา</li>
+          </ul>
+        </li>
+        <li><strong>กำหนดวัตถุประสงค์ของช่องทาง</strong> — ระบุระดับการบริการลูกค้าเป้าหมาย</li>
+        <li><strong>ระบุทางเลือกหลัก:</strong>
+          <ul>
+            <li><strong>ประเภทคนกลาง:</strong> Retailers, value-added retailers, independent distributors, dealers</li>
+            <li><strong>จำนวนคนกลาง:</strong> Intensive, Exclusive, Selective</li>
+            <li><strong>ความรับผิดชอบของสมาชิก:</strong> นโยบายราคา เงื่อนไขการขาย สิทธิ์เขตพื้นที่ บริการเฉพาะ</li>
+          </ul>
+        </li>
+        <li><strong>ประเมินทางเลือก:</strong> Economic criteria, Control issues, Adaptive criteria</li>
+      </ol>
+
+      <h3>🎯 จำนวนคนกลาง — 3 ตัวเลือก</h3>
+      <div class="grid">
+        <div class="grid-item">
+          <h4>🔥 Intensive Distribution</h4>
+          <p>วางสินค้าในร้านค้าให้มากที่สุดเท่าที่เป็นไปได้</p>
+          <p style="font-size:0.9rem; color:#555;"><em>เช่น น้ำอัดลม ขนม</em></p>
+        </div>
+        <div class="grid-item">
+          <h4>💎 Exclusive Distribution</h4>
+          <p>ให้ dealer จำนวนจำกัดมีสิทธิ์ผูกขาดในการขายสินค้าในเขตพื้นที่ของตน</p>
+          <p style="font-size:0.9rem; color:#555;"><em>เช่น รถยนต์หรู, แบรนด์เนม</em></p>
+        </div>
+        <div class="grid-item">
+          <h4>🎯 Selective Distribution</h4>
+          <p>ใช้คนกลางมากกว่าหนึ่ง แต่น้อยกว่าทั้งหมดที่ยินดีจำหน่าย</p>
+          <p style="font-size:0.9rem; color:#555;"><em>เช่น เครื่องใช้ไฟฟ้าระดับกลาง</em></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>🌍 การออกแบบช่องทางระหว่างประเทศ</h2>
+      <ul>
+        <li>แต่ละประเทศมีระบบจัดจำหน่ายเฉพาะของตน</li>
+        <li>ระบบในประเทศกำลังพัฒนาอาจกระจัดกระจายหรือไม่มีประสิทธิภาพ</li>
+        <li>ประเทศกำลังพัฒนาอาจมีคนกลางหลายชั้นและจำนวนมาก</li>
+        <li>ศุลกากรและกฎระเบียบรัฐบาลสามารถจำกัดการจัดจำหน่ายในตลาดโลก</li>
+      </ul>
+      <div class="info">
+        <strong>กรณี Nestlé:</strong> ในเขตชุมชนรายได้ต่ำของบราซิล ที่ผู้บริโภคเข้าถึงซูเปอร์มาร์เก็ตได้จำกัด Nestlé เสริมการจัดจำหน่ายด้วยพนักงานขายอิสระหลายพันคนที่ขายสินค้า Nestlé ตามบ้าน
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>👥 Channel Management Decisions</h2>
+      <ul>
+        <li><strong>เลือกสมาชิก channel</strong> (Selecting)</li>
+        <li><strong>จัดการและจูงใจ</strong> สมาชิก channel — เน้น Partner Relationship Management</li>
+        <li><strong>ประเมิน</strong> สมาชิก channel</li>
+      </ul>
+      <div class="info">
+        <strong>กรณี Caterpillar:</strong> ทำงานใกล้ชิดกับเครือข่ายตัวแทนจำหน่ายอิสระทั่วโลก เพื่อหาทางใหม่ๆ ที่จะส่งมอบคุณค่าให้ลูกค้า
+      </div>
+
+      <h3>⚖️ นโยบายสาธารณะและการตัดสินใจในการจัดจำหน่าย</h3>
+      <ul>
+        <li>กฎหมายที่ส่งผลต่อช่องทางพยายามป้องกันการกีดกันของบริษัทใดๆ ที่อาจกีดกันบริษัทอื่นไม่ให้ใช้ช่องทางที่ต้องการ</li>
+        <li>สัญญา dealing บางอย่างอาจอยู่ภายใต้ Clayton Act หากลดการแข่งขัน</li>
+      </ul>
+    </div>
+
+    <div class="quiz-box">
+      <h3>🧠 ทดสอบความเข้าใจ — บทที่ 10</h3>
+      <p><strong>คำถาม:</strong> McDonald's เปิดร้าน "express" ในห้าง Walmart นี่คือตัวอย่างของระบบใด?</p>
+      <div class="quiz-options">
+        <button class="quiz-option" onclick="checkAnswer(this, false)">A. Vertical Marketing System</button>
+        <button class="quiz-option" onclick="checkAnswer(this, true)">B. Horizontal Marketing System</button>
+        <button class="quiz-option" onclick="checkAnswer(this, false)">C. Disintermediation</button>
+        <button class="quiz-option" onclick="checkAnswer(this, false)">D. Conventional Distribution Channel</button>
+      </div>
+      <div class="quiz-feedback"></div>
+    </div>
+
+  </div>
+
+  <!-- ============ CHAPTER 11 ============ -->
+  <div id="tab-11" class="tab-content">
+
+    <div class="intro-box">
+      <h2>บทที่ 11: ค้าปลีกและค้าส่ง</h2>
+      <p style="margin-top:12px;">ครอบคลุมประเภทของผู้ค้าปลีก กลยุทธ์ Retail Marketing เทรนด์ใหม่ในวงการค้าปลีก และผู้ค้าส่ง</p>
+    </div>
+
+    <div class="card">
+      <h2>🎯 วัตถุประสงค์การเรียนรู้</h2>
+      <ul>
+        <li>อธิบายบทบาทของผู้ค้าปลีกในช่องทางการจัดจำหน่ายและประเภทหลักของผู้ค้าปลีก</li>
+        <li>อธิบายการตัดสินใจการตลาดของผู้ค้าปลีกที่สำคัญ</li>
+        <li>อภิปรายเทรนด์และพัฒนาการในวงการค้าปลีก</li>
+        <li>อธิบายประเภทหลักของผู้ค้าส่งและการตัดสินใจการตลาดของผู้ค้าส่ง</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>🛒 กรณีศึกษา: Walmart — ผู้ค้าปลีกที่ใหญ่ที่สุดในโลก</h2>
+      <ul>
+        <li>ทุ่มเทให้ Value Proposition ราคาต่ำที่ยาวนาน: <strong>"Save money. Live better."</strong></li>
+        <li>ต้นทุนต่ำทำให้ตั้งราคาต่ำได้ แต่ยังเก็บกำไรสูง</li>
+        <li>ลดต้นทุนผ่าน:
+          <ul>
+            <li>การจัดการที่เหนือกว่าและเทคโนโลยีที่ทันสมัย</li>
+            <li>ได้ราคาที่ดีที่สุดจากซัพพลายเออร์</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>🏪 Retailing คืออะไร?</h2>
+      <div class="grid">
+        <div class="grid-item">
+          <h4>🛍️ Retailing</h4>
+          <p>กิจกรรมทั้งหมดที่เกี่ยวข้องกับการขายสินค้าหรือบริการให้กับผู้บริโภคขั้นสุดท้ายโดยตรง สำหรับการใช้งานส่วนตัวที่ไม่ใช่ธุรกิจ</p>
+        </div>
+        <div class="grid-item">
+          <h4>🏬 Retailer</h4>
+          <p>ธุรกิจที่ยอดขายมาจากการค้าปลีกเป็นหลัก</p>
+        </div>
+      </div>
+
+      <h3>📱 Shopper Marketing</h3>
+      <p>ใช้ point-of-sale promotions และโฆษณาเพื่อขยาย brand equity ไปยัง <strong>"the last mile"</strong> และกระตุ้นการตัดสินใจซื้อในร้านที่ได้ผล</p>
+      <div class="info">
+        Shopper marketing ในปัจจุบัน รวมถึงความพยายามทั้งในร้าน ออนไลน์ และโมไบล์ช้อปปิ้ง
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>📊 ประเภทของผู้ค้าปลีก</h2>
+      <p>จำแนกได้ตาม 4 มิติ:</p>
+      <div class="grid">
+        <div class="grid-item">
+          <h4>🤝 1. Amount of Service</h4>
+          <p>ปริมาณการบริการที่นำเสนอ</p>
+        </div>
+        <div class="grid-item">
+          <h4>📦 2. Product Line</h4>
+          <p>ความกว้างและลึกของไลน์สินค้า</p>
+        </div>
+        <div class="grid-item">
+          <h4>💵 3. Relative Prices</h4>
+          <p>ราคาเปรียบเทียบ</p>
+        </div>
+        <div class="grid-item">
+          <h4>🏢 4. Organizational Approach</h4>
+          <p>วิธีการจัดองค์กร</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>🛎️ มิติที่ 1: Amount of Service</h2>
+      <table>
+        <tr><th>ประเภท</th><th>ลักษณะ</th></tr>
+        <tr><td><strong>Self-service retailers</strong></td><td>ลูกค้ายินดีดำเนินกระบวนการ locate-compare-select เอง</td></tr>
+        <tr><td><strong>Limited-service retailers</strong></td><td>ให้ความช่วยเหลือทางการขายมากขึ้นเพราะมีสินค้า shopping goods ที่ลูกค้าต้องการรายละเอียด</td></tr>
+        <tr><td><strong>Full-service retailers</strong></td><td>มีสินค้า specialty goods มากขึ้น ที่ลูกค้าต้องการคำแนะนำ</td></tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>📦 มิติที่ 2: Product Line</h2>
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <span>👔 Specialty Stores</span><span class="arrow">▼</span>
+        </div>
+        <div class="accordion-body">
+          <p>ร้านค้าปลีกที่มีไลน์สินค้าแคบ แต่มีความหลากหลาย <strong>ลึก</strong> ในไลน์นั้น</p>
+          <p><em>เช่น ร้านขายเครื่องดนตรี, ร้านนาฬิกา</em></p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <span>🏬 Department Stores</span><span class="arrow">▼</span>
+        </div>
+        <div class="accordion-body">
+          <p>ร้านที่มีไลน์สินค้าหลากหลาย แต่ละแผนกบริหารจัดการแยกกันโดยผู้เชี่ยวชาญ</p>
+          <p><em>เช่น Macy's, Bergdorf Goodman</em></p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <span>🛒 Supermarkets</span><span class="arrow">▼</span>
+        </div>
+        <div class="accordion-body">
+          <p>ร้านขนาดใหญ่ ต้นทุนต่ำ มาร์จิ้นต่ำ ปริมาณมาก self-service ที่มีสินค้าหลากหลายของของชำและของใช้ในบ้าน</p>
+          <p><em>กรณี Kroger:</strong> ผู้ค้าปลีก grocery รายใหญ่ที่สุดของอเมริกา ยอดขายและส่วนแบ่งดีที่สุดในวงการแม้เศรษฐกิจไม่ดี — ด้วยการตั้งราคาที่เน้นลูกค้า</em></p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <span>🏪 Convenience Stores</span><span class="arrow">▼</span>
+        </div>
+        <div class="accordion-body">
+          <p>ร้านขนาดเล็ก ใกล้พื้นที่ที่อยู่อาศัย เปิดยาวนาน 7 วัน/สัปดาห์ มีสินค้า convenience goods ที่หมุนเวียนเร็ว</p>
+          <p><em>กรณี Sheetz:</strong> วางตำแหน่งตัวเองเป็นมากกว่าร้าน convenience ขับเคลื่อนด้วย "Total Customer Focus" และคำขวัญ "Feel the Love" — มอบ "convenience without compromise"</em></p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <span>🏗️ Superstores</span><span class="arrow">▼</span>
+        </div>
+        <div class="accordion-body">
+          <p>ใหญ่กว่า supermarket ปกติมาก เสนอสินค้าหลากหลายของอาหาร ของไม่ใช่อาหาร และบริการที่ซื้อเป็นประจำ</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <span>💀 Category Killers</span><span class="arrow">▼</span>
+        </div>
+        <div class="accordion-body">
+          <p>ร้าน specialty ขนาดใหญ่ที่มีสินค้า <strong>ลึกมาก</strong> ในไลน์เดียว</p>
+          <p><em>เช่น Best Buy (อิเล็กทรอนิกส์), Toys "R" Us</em></p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <span>🛎️ Service Retailers</span><span class="arrow">▼</span>
+        </div>
+        <div class="accordion-body">
+          <p>ผู้ค้าปลีกที่ผลิตภัณฑ์เป็นบริการ</p>
+          <p><em>เช่น โรงแรม, สายการบิน, ธนาคาร, มหาวิทยาลัย</em></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>💰 มิติที่ 3: Relative Prices</h2>
+      <div class="grid">
+        <div class="grid-item">
+          <h4>🏷️ Discount Stores</h4>
+          <p>ขายสินค้ามาตรฐานในราคาและมาร์จิ้นต่ำ ในขนาดที่สูงกว่า</p>
+          <p><em>เช่น Walmart, Target</em></p>
+        </div>
+        <div class="grid-item">
+          <h4>🎁 Off-Price Retailers</h4>
+          <p>ซื้อสินค้าในราคาขายส่งที่ต่ำกว่าปกติ และขายในราคาต่ำกว่าราคาขายปลีก</p>
+        </div>
+      </div>
+      <h4>2 ประเภทของ Off-Price Retailers</h4>
+      <div class="grid">
+        <div class="grid-item">
+          <h4>🏭 Factory Outlet</h4>
+          <p>การขายปลีก off-price ที่บริษัทผู้ผลิตเป็นเจ้าของและบริหาร โดยปกติจะมีสินค้าส่วนเกิน, สินค้าเลิกผลิต, หรือมีตำหนิ</p>
+        </div>
+        <div class="grid-item">
+          <h4>📦 Warehouse Club</h4>
+          <p>ขายสินค้า brand name เลือกสรรในส่วนลดมากให้กับสมาชิกที่จ่ายค่าสมาชิกประจำปี</p>
+          <p><em>เช่น Costco, Sam's Club</em></p>
+        </div>
+      </div>
+      <div class="info">
+        <strong>กรณี Dollar General:</strong> ผู้ค้าปลีก discount-box ขนาดเล็กที่ใหญ่ที่สุดของประเทศ — Value promise ที่มีพลัง: <strong>"Save time. Save money. Every day"</strong> ร้านเล็กลง ต้นทุนต่ำ พื้นที่ที่ไม่หรูหราช่วยลดค่าเช่า
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>🏢 มิติที่ 4: Organizational Approach</h2>
+      <div class="grid">
+        <div class="grid-item">
+          <h4>🔗 Corporate Chains</h4>
+          <p>ร้านสองแห่งขึ้นไปที่เป็นของ commonly และควบคุมร่วมกัน</p>
+        </div>
+        <div class="grid-item">
+          <h4>🤝 Voluntary Chains</h4>
+          <p>กลุ่มของผู้ค้าปลีกอิสระที่สนับสนุนโดยผู้ค้าส่ง ซึ่งร่วมจัดซื้อและจัดจำหน่ายร่วมกัน</p>
+        </div>
+        <div class="grid-item">
+          <h4>🍔 Franchising</h4>
+          <p>สมาคมตามสัญญาระหว่างผู้ผลิต/ผู้ค้าส่ง/บริษัทบริการ (franchisor) และนักธุรกิจอิสระ (franchisees) ที่ซื้อสิทธิ์ในการเป็นเจ้าของและดำเนินการหนึ่งหน่วยขึ้นไปในระบบแฟรนไชส์</p>
+          <p><em>เช่น McDonald's, Taco Bell, Pizza Hut</em></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>📋 Figure 11.1 — Retailer Marketing Strategies</h2>
+      <div class="chart-container">
+        <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+          <!-- Retail strategy box -->
+          <rect x="40" y="40" width="320" height="120" fill="#e8f0fe" stroke="#3498db" stroke-width="2" rx="8"/>
+          <text x="200" y="65" font-family="Prompt" font-size="16" font-weight="700" fill="#27ae60" text-anchor="middle">Retail Strategy</text>
+          <text x="60" y="100" font-family="Prompt" font-size="13" fill="#2c3e50">• Retail segmentation</text>
+          <text x="60" y="120" font-family="Prompt" font-size="13" fill="#2c3e50">  and targeting</text>
+          <text x="60" y="145" font-family="Prompt" font-size="13" fill="#2c3e50">• Store differentiation</text>
+
+          <!-- Arrow from Retail Strategy down to result -->
+          <line x1="200" y1="172" x2="200" y2="308" stroke="#27ae60" stroke-width="3" marker-end="url(#arrCh11)"/>
+
+          <!-- Retail Marketing Mix box -->
+          <rect x="440" y="40" width="320" height="200" fill="#fff8e7" stroke="#f39c12" stroke-width="2" rx="8"/>
+          <text x="600" y="65" font-family="Prompt" font-size="16" font-weight="700" fill="#27ae60" text-anchor="middle">Retail Marketing Mix</text>
+          <text x="460" y="100" font-family="Prompt" font-size="13" fill="#2c3e50">• Product and service assortment</text>
+          <text x="460" y="125" font-family="Prompt" font-size="13" fill="#2c3e50">• Retail prices</text>
+          <text x="460" y="150" font-family="Prompt" font-size="13" fill="#2c3e50">• Promotion</text>
+          <text x="460" y="175" font-family="Prompt" font-size="13" fill="#2c3e50">• Distribution (location)</text>
+
+          <line x1="600" y1="222" x2="600" y2="308" stroke="#27ae60" stroke-width="3" marker-end="url(#arrCh11)"/>
+
+          <!-- Result box (clearly below both boxes) -->
+          <rect x="120" y="310" width="560" height="60" fill="#e74c3c" rx="8"/>
+          <text x="400" y="348" font-family="Prompt" font-size="15" font-weight="700" fill="white" text-anchor="middle">Create value for targeted retail customers</text>
+
+
+
+          <defs>
+            <marker id="arrCh11" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+              <path d="M0,0 L10,5 L0,10 z" fill="#27ae60"/>
+            </marker>
+          </defs>
+        </svg>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>🎯 Retailer Marketing Decisions</h2>
+      <p>4 การตัดสินใจหลัก:</p>
+      <ul>
+        <li><strong>Segmentation</strong> — แบ่งกลุ่มลูกค้า</li>
+        <li><strong>Targeting</strong> — เลือกกลุ่มเป้าหมาย</li>
+        <li><strong>Store Differentiation</strong> — สร้างความแตกต่าง</li>
+        <li><strong>Positioning</strong> — วางตำแหน่ง</li>
+      </ul>
+      <div class="info">
+        <strong>กรณี Whole Foods:</strong> วางตำแหน่งห่างจาก Walmart และ discounter อื่นๆ — มุ่งเน้นที่อาหารธรรมชาติและออร์แกนิกคุณภาพสูง กลายเป็นหนึ่งในผู้ค้าปลีกอาหารที่เติบโตเร็วและทำกำไรมากที่สุดของประเทศ
+      </div>
+
+      <h3>🛍️ Retail Marketing Mix</h3>
+      <ul>
+        <li><strong>Product assortment</strong> — ควรสร้างความแตกต่างให้ผู้ค้าปลีกพร้อมตอบสนองความคาดหวังของลูกค้า</li>
+        <li><strong>Services mix</strong> — ช่วยสร้างความแตกต่างจากผู้ค้าปลีกอื่น</li>
+        <li><strong>Store atmosphere</strong> — สำคัญในฐานะประสบการณ์ที่ทำให้ลูกค้าตัดสินใจซื้อ</li>
+        <li><strong>Experiential retailing</strong> — กำลังเป็นที่นิยมมากขึ้น</li>
+      </ul>
+      <div class="info">
+        <strong>กรณี Cabela's:</strong> "ประสบการณ์" ทำให้ที่นี่กลายเป็นจุดท่องเที่ยว
+      </div>
+
+      <h3>💵 Price Decisions</h3>
+      <p>นโยบายราคาต้องสอดคล้องกับ target market, positioning, การจัดสินค้าและบริการ, การแข่งขัน, และปัจจัยทางเศรษฐกิจ</p>
+      <ul>
+        <li><strong>Price promotions and EDLP</strong> (Every Day Low Pricing)</li>
+        <li><strong>High-low pricing</strong></li>
+      </ul>
+      <div class="info">
+        <strong>กรณี Bergdorf Goodman:</strong> รองรับลูกค้าระดับสูง พร้อมราคาที่จับคู่กัน
+      </div>
+
+      <h3>📢 Promotion Decisions</h3>
+      <p>ผู้ค้าปลีกสามารถใช้เครื่องมือโปรโมตใดๆ ก็ได้: advertising, personal selling, sales promotion, public relations, direct marketing</p>
+
+      <h3>📍 Distribution (Location)</h3>
+      <p>Location คือกุญแจสู่ความสำเร็จ ผู้ค้าปลีกสามารถตั้งใน:</p>
+      <ul>
+        <li>Central business districts (เขตธุรกิจใจกลางเมือง)</li>
+        <li>Regional shopping centers (ศูนย์การค้าประจำภูมิภาค)</li>
+        <li>Community shopping centers (ศูนย์การค้าชุมชน)</li>
+        <li>Strip malls (neighborhood shopping centers)</li>
+        <li>Power centers</li>
+        <li>Lifestyle centers</li>
+      </ul>
+      <p style="margin-top:10px;">ศูนย์การค้าวันนี้ <strong>ไม่ได้เป็นแค่ที่ซื้อของ</strong> แต่เป็นที่พบปะและใช้เวลา</p>
+    </div>
+
+    <div class="card">
+      <h2>🚀 Retail Trends &amp; Developments</h2>
+      <div class="grid">
+        <div class="grid-item">
+          <h4>🆕 New retail forms, shortening retail life cycles, retail convergence</h4>
+          <p>รูปแบบใหม่เกิดขึ้นเร็ว วงจรชีวิตสั้นลง ค้าปลีกบรรจบกัน</p>
+        </div>
+        <div class="grid-item">
+          <h4>🏢 Rise of megaretailers</h4>
+          <p>ผู้ค้าปลีกขนาดยักษ์เพิ่มขึ้น</p>
+        </div>
+        <div class="grid-item">
+          <h4>💻 Growth of direct &amp; online retailing</h4>
+          <p>ค้าปลีกออนไลน์เติบโต — ลูกค้ายุคใหม่ค้นหาออนไลน์ก่อนซื้อ</p>
+        </div>
+        <div class="grid-item">
+          <h4>🤖 Growing importance of retail technology</h4>
+          <p>เทคโนโลยีในร้านสำคัญขึ้นเรื่อยๆ <em>(เช่น Stop &amp; Shop ใช้เทคโนโลยีให้การช้อปปิ้งเร็วและสะดวกกว่า)</em></p>
+        </div>
+        <div class="grid-item">
+          <h4>🌱 Green retailing</h4>
+          <p>ค้าปลีกเป็นมิตรกับสิ่งแวดล้อม <em>(เช่น McDonald's ออกแบบร้าน eco-friendly จากพื้นฐาน)</em></p>
+        </div>
+        <div class="grid-item">
+          <h4>🌍 Global expansion</h4>
+          <p>ผู้ค้าปลีกใหญ่ๆ ขยายไปทั่วโลก</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>📦 Wholesaling — การค้าส่ง</h2>
+      <div class="success">
+        <strong>Wholesaling</strong> = กิจกรรมทั้งหมดที่เกี่ยวข้องกับการขายสินค้าและบริการให้กับ ผู้ที่ซื้อเพื่อนำไปขายต่อ หรือ ใช้ในธุรกิจ
+      </div>
+      <div class="info">
+        <strong>กรณี Grainger:</strong> หนึ่งในผู้ค้าส่งที่สำคัญที่สุดของประเทศ แต่ผู้บริโภคขั้นสุดท้ายมักไม่รู้จัก
+        <ul style="margin-top:8px;">
+          <li>เสนอสินค้า MRO (maintenance, repair, operating) มากกว่า <strong>900,000 รายการ</strong></li>
+          <li>แก่ลูกค้ามากกว่า <strong>1.8 ล้านราย</strong></li>
+          <li>Value Proposition: ทำให้การซื้อสินค้า MRO ง่ายและประหยัดกว่า</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="quiz-box">
+      <h3>🧠 ทดสอบความเข้าใจ — บทที่ 11</h3>
+      <p><strong>คำถาม:</strong> ร้านที่มีไลน์สินค้าแคบมาก แต่มีความหลากหลายลึกในไลน์นั้น เช่น Best Buy ที่เน้นเฉพาะอิเล็กทรอนิกส์ เรียกว่าอะไร?</p>
+      <div class="quiz-options">
+        <button class="quiz-option" onclick="checkAnswer(this, false)">A. Department Store</button>
+        <button class="quiz-option" onclick="checkAnswer(this, false)">B. Supermarket</button>
+        <button class="quiz-option" onclick="checkAnswer(this, true)">C. Category Killer</button>
+        <button class="quiz-option" onclick="checkAnswer(this, false)">D. Convenience Store</button>
+      </div>
+      <div class="quiz-feedback"></div>
+    </div>
+
+    <div class="card">
+      <h2>💭 Fuel for Thought — คำถามชวนคิด</h2>
+      <ul>
+        <li>ร้านค้าหลายแห่งกำลังกลายเป็น <strong>"communities"</strong> หรือ "hangouts" ทั้งในแบบ brick-and-mortar และโลกเสมือน</li>
+        <li>ผู้ค้าปลีกสามารถทำอะไรได้บ้างเพื่อทำให้ร้าน brick-and-mortar ของตน "เป็นมิตรกับชุมชน"?</li>
+        <li>มีสถานการณ์ใดที่ไม่อยากให้ลูกค้ามา "hang out" หรือไม่? อธิบาย</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <p>📚 จัดทำเพื่อเตรียมสอบ — Marketing: An Introduction (Armstrong &amp; Kotler, 11e)</p>
+    <p>บทที่ 8: Developing New Products &amp; Managing PLC | บทที่ 9: Pricing | บทที่ 10: Marketing Channels | บทที่ 11: Retailing &amp; Wholesaling</p>
+  </div>
+
+</div>
+
+<script>
+  function showTab(num, btn) {
+    document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+    document.getElementById('tab-' + num).classList.add('active');
+    btn.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function showStep(n) {
+    // Toggle active state on the clicked step
+    const steps = document.querySelectorAll('.process-step');
+    const currentDetail = document.getElementById('step-' + n);
+    const wasActive = currentDetail.classList.contains('active');
+
+    document.querySelectorAll('.process-detail').forEach(d => d.classList.remove('active'));
+    steps.forEach(s => s.classList.remove('active'));
+
+    if (!wasActive) {
+      currentDetail.classList.add('active');
+      // Find matching step
+      steps.forEach(s => {
+        const num = s.querySelector('.num');
+        if (num && parseInt(num.textContent) === n) {
+          s.classList.add('active');
+        }
+      });
+    }
+  }
+
+  function showStage(stage, btn) {
+    document.querySelectorAll('.stage-content').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.stage-btn').forEach(el => el.classList.remove('active'));
+    document.getElementById('stage-' + stage).classList.add('active');
+    btn.classList.add('active');
+  }
+
+  function toggleAccordion(header) {
+    const item = header.parentElement;
+    item.classList.toggle('active');
+  }
+
+  function checkAnswer(btn, isCorrect) {
+    const quiz = btn.closest('.quiz-box');
+    const options = quiz.querySelectorAll('.quiz-option');
+    const feedback = quiz.querySelector('.quiz-feedback');
+
+    options.forEach(o => o.disabled = true);
+
+    if (isCorrect) {
+      btn.classList.add('correct');
+      feedback.textContent = '✅ ถูกต้อง! เก่งมาก';
+      feedback.style.color = '#27ae60';
+    } else {
+      btn.classList.add('wrong');
+      feedback.textContent = '❌ ยังไม่ถูก ลองทบทวนอีกครั้งนะ';
+      feedback.style.color = '#e74c3c';
+      // Show correct answer
+      options.forEach(o => {
+        if (o.getAttribute('onclick').includes('true')) {
+          o.classList.add('correct');
+        }
+      });
+    }
+
+    setTimeout(() => {
+      options.forEach(o => {
+        o.disabled = false;
+        o.classList.remove('correct', 'wrong');
+      });
+      feedback.textContent = '';
+    }, 5000);
+  }
+</script>
+
+</body>
+</html>
