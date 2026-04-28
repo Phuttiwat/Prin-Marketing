@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>คู่มือเตรียมสอบ Marketing — บทที่ 8-11</title>
+<title>คู่มือเตรียมสอบ Marketing — บทที่ 2, 8-14</title>
 <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -390,7 +390,8 @@
 
   <!-- Tab buttons -->
   <div class="tabs">
-    <button class="tab-btn active" onclick="showTab(8, this)">📦 บทที่ 8<br><small>New Products & PLC</small></button>
+    <button class="tab-btn active" onclick="showTab(2, this)">🏢 บทที่ 2<br><small>Company & Marketing Strategy</small></button>
+    <button class="tab-btn" onclick="showTab(8, this)">📦 บทที่ 8<br><small>New Products & PLC</small></button>
     <button class="tab-btn" onclick="showTab(9, this)">💰 บทที่ 9<br><small>Pricing</small></button>
     <button class="tab-btn" onclick="showTab(10, this)">🚚 บทที่ 10<br><small>Marketing Channels</small></button>
     <button class="tab-btn" onclick="showTab(11, this)">🏪 บทที่ 11<br><small>Retailing & Wholesaling</small></button>
@@ -400,7 +401,247 @@
   </div>
 
   <!-- ============ CHAPTER 8 ============ -->
-  <div id="tab-8" class="tab-content active">
+  <!-- ===== TAB 2 ===== -->
+  <div id="tab-2" class="tab-content active">
+    <div class="intro-box">
+      <h2>🏢 บทที่ 2: Company and Marketing Strategy — Partnering to Build Customer Relationships</h2>
+      <p>Strategic Planning, BCG Matrix, Ansoff Matrix, Marketing Mix 4Ps/4Cs, SWOT, Marketing Plan, Implementation &amp; Control และ Return on Marketing Investment</p>
+    </div>
+
+    <div class="card">
+      <h2>🗺️ Strategic Planning</h2>
+      <div class="highlight"><strong>Strategic Planning</strong> = กระบวนการพัฒนาและรักษา <strong>strategic fit</strong> ระหว่างเป้าหมาย/ความสามารถขององค์กรกับโอกาสทางการตลาดที่เปลี่ยนแปลง</div>
+      <h3>4 ขั้นตอนของ Strategic Planning (Corporate Level → Business Level)</h3>
+      <div class="process-flow">
+        <div class="process-step" onclick="showStep(31)"><div class="num">1</div>Defining Company Mission</div>
+        <div class="process-step" onclick="showStep(32)"><div class="num">2</div>Setting Objectives &amp; Goals</div>
+        <div class="process-step" onclick="showStep(33)"><div class="num">3</div>Designing Business Portfolio</div>
+        <div class="process-step" onclick="showStep(34)"><div class="num">4</div>Planning Marketing Strategies</div>
+      </div>
+      <div id="step-31" class="process-detail">
+        <h4>1. Defining the Company Mission</h4>
+        <div class="highlight"><strong>Mission Statement</strong> = คำแถลงเกี่ยวกับวัตถุประสงค์ขององค์กร — สิ่งที่ต้องการบรรลุในสภาพแวดล้อมที่กว้างขึ้น</div>
+        <p>Mission Statement ควรตอบ 4 คำถาม:</p>
+        <ul>
+          <li>What is our <strong>business</strong>?</li>
+          <li>Who is our <strong>customer</strong>?</li>
+          <li>What do consumers <strong>value</strong>?</li>
+          <li>What <strong>should</strong> our business be?</li>
+        </ul>
+        <div class="warning"><strong>⚠️ สำคัญ:</strong> Mission Statements ควรเป็น <strong>market-oriented</strong> ไม่ใช่ product-oriented — เช่น "We sell houses" ❌ → "We help people find their dream home" ✅</div>
+      </div>
+      <div id="step-32" class="process-detail">
+        <h4>2. Setting Company Objectives and Goals</h4>
+        <ul>
+          <li>Mission ต้องถูกแปลงเป็น <strong>objectives</strong> ที่สนับสนุนแต่ละระดับของฝ่ายบริหาร</li>
+          <li>กลยุทธ์และโปรแกรมการตลาดต้องพัฒนาขึ้นมาเพื่อ<strong>สนับสนุน objectives</strong> เหล่านี้</li>
+        </ul>
+      </div>
+      <div id="step-33" class="process-detail">
+        <h4>3. Designing the Business Portfolio</h4>
+        <div class="highlight"><strong>Business Portfolio</strong> = กลุ่มธุรกิจและสินค้าที่ประกอบกันขึ้นเป็นบริษัท</div>
+        <p>บริษัทต้อง: วิเคราะห์ portfolio ปัจจุบัน → ตัดสินใจว่า SBU ไหนควรลงทุนมาก/น้อย/ไม่ลงทุน → พัฒนากลยุทธ์การเติบโตและลด portfolio ในอนาคต</p>
+      </div>
+      <div id="step-34" class="process-detail">
+        <h4>4. Planning Marketing and Other Functional Strategies</h4>
+        <p>Marketing มีบทบาทสำคัญใน strategic planning โดย:</p>
+        <ul>
+          <li>ให้ <strong>guiding philosophy</strong> สำหรับกลยุทธ์ของบริษัท</li>
+          <li>ให้ <strong>inputs</strong> แก่ strategic planners</li>
+          <li>ออกแบบกลยุทธ์เพื่อช่วย business units บรรลุ objectives</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>📊 Portfolio Analysis — BCG Growth-Share Matrix</h2>
+      <div class="highlight">
+        <strong>Portfolio Analysis</strong> = กระบวนการที่ฝ่ายบริหารประเมินสินค้าและธุรกิจของบริษัท<br>
+        <strong>วัตถุประสงค์:</strong> จัดสรรทรัพยากรไปยังธุรกิจที่มีกำไรมากกว่า พร้อม phase out/drop ธุรกิจที่อ่อนแอ<br>
+        <strong>เกณฑ์:</strong> Attractiveness ของตลาด/อุตสาหกรรมของ SBU + Strength ของ SBU ในตลาดนั้น
+      </div>
+      <table>
+        <tr><th>ช่อง</th><th>Market Growth</th><th>Relative Market Share</th><th>กลยุทธ์</th></tr>
+        <tr><td>⭐ <strong>Stars</strong></td><td>สูง</td><td>สูง</td><td>ลงทุนหนักเพื่อรองรับการเติบโตเร็ว</td></tr>
+        <tr><td>🐄 <strong>Cash Cows</strong></td><td>ต่ำ</td><td>สูง</td><td>ลงทุนน้อยเพื่อรักษา market share — สร้างเงินสดเลี้ยง Stars/Question Marks</td></tr>
+        <tr><td>❓ <strong>Question Marks</strong></td><td>สูง</td><td>ต่ำ</td><td>ต้องการเงินสดมากเพื่อรักษา share ปัจจุบัน — อาจลงทุนเพิ่มหรือตัดทิ้ง</td></tr>
+        <tr><td>🐕 <strong>Dogs</strong></td><td>ต่ำ</td><td>ต่ำ</td><td>ไม่ค่อยสร้างเงินสด — พิจารณาตัดทิ้ง</td></tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>🔲 Product/Market Expansion Grid (Ansoff Matrix)</h2>
+      <p>กรอบในการระบุโอกาสการเติบโต ใช้ 2 มิติ: <strong>ตลาด (เดิม/ใหม่)</strong> และ <strong>สินค้า (เดิม/ใหม่)</strong></p>
+      <div class="grid">
+        <div class="grid-item" style="border-top-color:#27ae60;">
+          <h4>1. Market Penetration</h4>
+          <p>สินค้าเดิม + ตลาดเดิม</p>
+          <p>เพิ่มยอดขายสินค้าเดิมในตลาดเดิม<strong>โดยไม่เปลี่ยนสินค้า</strong> — โปรโมชั่น, ลดราคา, เพิ่ม distribution</p>
+        </div>
+        <div class="grid-item" style="border-top-color:#3498db;">
+          <h4>2. Market Development</h4>
+          <p>สินค้าเดิม + ตลาดใหม่</p>
+          <p>ระบุและพัฒนา<strong>ตลาด segment ใหม่</strong>สำหรับสินค้าเดิม — กลุ่มประชากรใหม่, ภูมิศาสตร์ใหม่</p>
+        </div>
+        <div class="grid-item" style="border-top-color:#e67e22;">
+          <h4>3. Product Development</h4>
+          <p>สินค้าใหม่ + ตลาดเดิม</p>
+          <p>นำเสนอ<strong>สินค้าที่ปรับปรุงหรือใหม่</strong>ให้กับตลาด segment เดิม</p>
+        </div>
+        <div class="grid-item" style="border-top-color:#e74c3c;">
+          <h4>4. Diversification</h4>
+          <p>สินค้าใหม่ + ตลาดใหม่</p>
+          <p>เริ่มต้นหรือซื้อธุรกิจ<strong>นอกสินค้าและตลาดปัจจุบัน</strong>ของบริษัท — ความเสี่ยงสูงที่สุด</p>
+        </div>
+      </div>
+      <div class="info"><strong>Downsizing</strong> = ลด portfolio โดยกำจัด SBUs ที่ไม่ทำกำไรหรือไม่เข้ากับกลยุทธ์รวม — สาเหตุ: บริษัทโตเร็วเกินไป, ขาดประสบการณ์ในตลาด, ตลาดเปลี่ยน, สินค้าถดถอย</div>
+    </div>
+
+    <div class="card">
+      <h2>🎯 Marketing Strategy: STP + Marketing Mix</h2>
+      <div class="highlight"><strong>Marketing Strategy</strong> = logic ทางการตลาดที่บริษัทหวังจะใช้สร้างคุณค่าให้ลูกค้าและบรรลุความสัมพันธ์กับลูกค้าที่มีกำไร</div>
+
+      <h3>STP: Segmentation → Targeting → Positioning</h3>
+      <div class="grid">
+        <div class="grid-item">
+          <h4>📂 Market Segmentation</h4>
+          <p>แบ่งตลาดออกเป็นกลุ่มผู้ซื้อที่แตกต่างกันซึ่งมีความต้องการ, ลักษณะ, หรือพฤติกรรมต่างกัน และอาจต้องการสินค้าหรือโปรแกรมการตลาดแยกกัน</p>
+          <p><strong>Market Segment</strong> = กลุ่มผู้บริโภคที่ตอบสนองต่อ marketing effort ในแบบเดียวกัน</p>
+        </div>
+        <div class="grid-item">
+          <h4>🎯 Market Targeting</h4>
+          <p>กระบวนการประเมินความน่าสนใจของแต่ละ segment และเลือก<strong>เข้าสู่ segment หนึ่งหรือมากกว่า</strong></p>
+        </div>
+        <div class="grid-item">
+          <h4>📍 Positioning</h4>
+          <p>จัดให้สินค้าครอบครองตำแหน่งที่<strong>ชัดเจน โดดเด่น และน่าต้องการ</strong>เมื่อเปรียบเทียบกับสินค้าคู่แข่งในจิตใจของกลุ่มเป้าหมาย</p>
+        </div>
+        <div class="grid-item">
+          <h4>⚡ Differentiation</h4>
+          <p>สร้างความแตกต่างให้ market offering อย่างแท้จริงเพื่อ<strong>สร้างคุณค่าให้ลูกค้าสูงกว่าคู่แข่ง</strong></p>
+        </div>
+      </div>
+
+      <h3>📦 Marketing Mix — 4Ps และ 4Cs</h3>
+      <div class="highlight"><strong>Marketing Mix</strong> = ชุดเครื่องมือการตลาดเชิงกลยุทธ์ (Product, Price, Place, Promotion) ที่บริษัทผสานกันเพื่อสร้าง response ที่ต้องการในตลาดเป้าหมาย</div>
+      <table>
+        <tr><th>4Ps (มุมมองผู้ขาย)</th><th>รายละเอียด</th><th>4Cs (มุมมองผู้ซื้อ)</th></tr>
+        <tr><td><strong>Product</strong></td><td>Variety, Quality, Design, Features, Brand name, Packaging, Services</td><td><strong>Customer Solution</strong></td></tr>
+        <tr><td><strong>Price</strong></td><td>List price, Discounts, Allowances, Payment period, Credit terms</td><td><strong>Customer Cost</strong></td></tr>
+        <tr><td><strong>Place</strong></td><td>Channels, Coverage, Locations, Inventory, Transportation, Logistics</td><td><strong>Convenience</strong></td></tr>
+        <tr><td><strong>Promotion</strong></td><td>Advertising, Personal selling, Sales promotion, Public relations</td><td><strong>Communication</strong></td></tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>🔄 Managing Marketing: Analysis → Planning → Implementation → Control</h2>
+
+      <div class="stage-tabs">
+        <button class="stage-btn active" onclick="showStage('mg1',this)">🔍 Analysis</button>
+        <button class="stage-btn" onclick="showStage('mg2',this)">📝 Planning</button>
+        <button class="stage-btn" onclick="showStage('mg3',this)">⚙️ Implementation</button>
+        <button class="stage-btn" onclick="showStage('mg4',this)">🎛️ Control</button>
+      </div>
+
+      <div id="stage-mg1" class="stage-content active">
+        <h3>Marketing Analysis — SWOT</h3>
+        <table>
+          <tr><th></th><th>Positive ✅</th><th>Negative ❌</th></tr>
+          <tr><td><strong>Internal (ภายใน)</strong></td><td><strong>Strengths</strong><br>ความสามารถภายในที่ช่วยให้บรรลุ objectives</td><td><strong>Weaknesses</strong><br>ข้อจำกัดภายในที่อาจขัดขวางการบรรลุ objectives</td></tr>
+          <tr><td><strong>External (ภายนอก)</strong></td><td><strong>Opportunities</strong><br>ปัจจัยภายนอกที่บริษัทอาจใช้ประโยชน์ได้</td><td><strong>Threats</strong><br>ปัจจัยภายนอกในปัจจุบันและอนาคตที่ท้าทาย performance</td></tr>
+        </table>
+      </div>
+
+      <div id="stage-mg2" class="stage-content">
+        <h3>Marketing Planning — Contents of Marketing Plan</h3>
+        <ol style="margin:10px 0 10px 24px; line-height:2;">
+          <li><strong>Executive Summary</strong> — สรุปโดยย่อ</li>
+          <li><strong>Current Marketing Situation</strong> — สถานการณ์ตลาดปัจจุบัน</li>
+          <li><strong>Analysis of Threats and Opportunities</strong> — วิเคราะห์ SWOT</li>
+          <li><strong>Objectives and Issues</strong> — วัตถุประสงค์และประเด็น</li>
+          <li><strong>Marketing Strategy</strong> — กลยุทธ์การตลาด (STP + 4Ps)</li>
+          <li><strong>Action Programs</strong> — โปรแกรมการดำเนินงาน</li>
+          <li><strong>Budgets</strong> — งบประมาณ</li>
+          <li><strong>Controls</strong> — การควบคุมและติดตาม</li>
+        </ol>
+      </div>
+
+      <div id="stage-mg3" class="stage-content">
+        <h3>Marketing Implementation</h3>
+        <div class="highlight"><strong>Marketing Implementation</strong> = การแปลงกลยุทธ์และแผนการตลาดให้เป็น<strong>การกระทำทางการตลาด</strong>เพื่อบรรลุวัตถุประสงค์เชิงกลยุทธ์</div>
+        <h4>รูปแบบการจัดองค์กรฝ่ายการตลาด</h4>
+        <div class="grid">
+          <div class="grid-item"><h4>Functional</h4><p>แต่ละกิจกรรมการตลาดมีผู้เชี่ยวชาญเฉพาะด้านรับผิดชอบ</p></div>
+          <div class="grid-item"><h4>Geographic</h4><p>พนักงานขายและการตลาดถูกแบ่งตามประเทศ/ภูมิภาค/เขต</p></div>
+          <div class="grid-item"><h4>Product Management</h4><p>ผู้รับผิดชอบคนหนึ่งรับผิดชอบ strategy และ marketing ของสินค้าเดียว</p></div>
+          <div class="grid-item"><h4>Market/Customer</h4><p>ผู้จัดการรับผิดชอบตลาดหรือประเภทลูกค้าเฉพาะ</p></div>
+          <div class="grid-item"><h4>Combination</h4><p>ผสมผสานแนวทางข้างต้น</p></div>
+        </div>
+      </div>
+
+      <div id="stage-mg4" class="stage-content">
+        <h3>Marketing Control</h3>
+        <div class="highlight"><strong>Marketing Control</strong> = การวัดและประเมินผลลัพธ์ของกลยุทธ์และแผนการตลาด และดำเนินการแก้ไข เพื่อให้บรรลุ objectives</div>
+        <div class="grid">
+          <div class="grid-item" style="border-top-color:#e67e22;"><h4>⚙️ Operating Control</h4><p>ประเมิน performance เทียบกับ<strong>แผนประจำปี</strong> และดำเนินการแก้ไข</p></div>
+          <div class="grid-item" style="border-top-color:#9b59b6;"><h4>🔭 Strategic Control</h4><p>ประเมินว่ากลยุทธ์ของบริษัท<strong>ตรงกับ opportunities</strong> ในตลาดหรือไม่</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>💰 Return on Marketing Investment (Marketing ROI)</h2>
+      <div class="highlight"><strong>Marketing ROI</strong> = ผลตอบแทนสุทธิจากการลงทุนทางการตลาด <strong>หารด้วยต้นทุน</strong>การลงทุนทางการตลาด</div>
+      <h3>วิธีประเมิน Marketing ROI</h3>
+      <div class="grid">
+        <div class="grid-item" style="border-top-color:#3498db;">
+          <h4>📈 Standard Performance Measures</h4>
+          <ul>
+            <li>Brand awareness (การรับรู้แบรนด์)</li>
+            <li>Sales (ยอดขาย)</li>
+            <li>Market share (ส่วนแบ่งตลาด)</li>
+          </ul>
+        </div>
+        <div class="grid-item" style="border-top-color:#27ae60;">
+          <h4>👥 Customer-Centered Measures</h4>
+          <ul>
+            <li>Customer acquisition (การได้ลูกค้าใหม่)</li>
+            <li>Customer retention (การรักษาลูกค้า)</li>
+            <li>Customer lifetime value (CLV)</li>
+            <li>Customer equity (ทุนลูกค้า)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="success">
+        <strong>สูตร Marketing ROI:</strong> Marketing → ปรับปรุงคุณค่าและความพึงพอใจของลูกค้า → เพิ่มการดึงดูดและรักษาลูกค้า → เพิ่ม Customer Lifetime Value และ Customer Equity → <strong>Return on Marketing Investment</strong>
+      </div>
+    </div>
+
+    <div class="quiz-box">
+      <h3>🧠 ทดสอบความเข้าใจ — บทที่ 2</h3>
+      <p><strong>Q:</strong> BCG Matrix ช่อง "Cash Cow" คือ SBU ที่มีลักษณะอย่างไร?</p>
+      <div class="quiz-options">
+        <button class="quiz-option" onclick="checkAnswer(this,false)">A) Market growth สูง + Market share สูง</button>
+        <button class="quiz-option" onclick="checkAnswer(this,true)">B) Market growth ต่ำ + Market share สูง</button>
+        <button class="quiz-option" onclick="checkAnswer(this,false)">C) Market growth สูง + Market share ต่ำ</button>
+        <button class="quiz-option" onclick="checkAnswer(this,false)">D) Market growth ต่ำ + Market share ต่ำ</button>
+      </div>
+      <div class="quiz-feedback"></div>
+    </div>
+
+    <div class="card">
+      <h2>💭 Fuel for Thought — คำถามชวนคิด</h2>
+      <ul>
+        <li>Mission Statement ที่ว่า "We sell houses and commercial property" มีปัญหาอะไร? เขียนใหม่อย่างไรให้ market-oriented?</li>
+        <li>ลองวิเคราะห์ธุรกิจที่คุณรู้จักด้วย BCG Matrix — SBU ไหนคือ Star? Cash Cow? Question Mark? Dog?</li>
+        <li>4Ps กับ 4Cs ต่างกันอย่างไร? ทำไมมุมมอง 4Cs จึงสำคัญในยุคปัจจุบัน?</li>
+        <li>ปัจจัยภายนอก (economic, technological, social) ส่งผลต่อการตลาดสินค้าที่คุณชื่นชอบอย่างไร?</li>
+      </ul>
+    </div>
+  </div>
+  <!-- ===== END TAB 2 ===== -->
+
+  <div id="tab-8" class="tab-content">
 
     <div class="intro-box">
       <h2>บทที่ 8: การพัฒนาผลิตภัณฑ์ใหม่และการจัดการวงจรชีวิตผลิตภัณฑ์</h2>
@@ -2153,9 +2394,497 @@
 
   </div>
 
+  <!-- ===== TAB 12 ===== -->
+  <div id="tab-12" class="tab-content">
+    <div class="intro-box">
+      <h2>📢 บทที่ 12: Advertising &amp; Public Relations</h2>
+      <p>Promotion Mix, IMC, Push/Pull Strategy, กระบวนการตัดสินใจโฆษณา และ Public Relations</p>
+    </div>
+
+    <div class="card">
+      <h2>🎯 Promotion Mix</h2>
+      <div class="highlight"><strong>Promotion Mix</strong> = ส่วนผสมเฉพาะของเครื่องมือส่งเสริมการตลาดที่บริษัทใช้เพื่อ<strong>สื่อสารคุณค่าและสร้างความสัมพันธ์</strong>กับลูกค้า</div>
+      <h3>5 เครื่องมือหลัก</h3>
+      <div class="grid">
+        <div class="grid-item"><h4>📺 Advertising</h4><p>การนำเสนอแบบ <strong>non-personal ที่จ่ายเงิน</strong> โดยผู้สนับสนุนที่ระบุตัวได้ — เข้าถึงมวลชนกว้าง, ต้นทุนต่อครั้งต่ำ, สร้างภาพระยะยาว</p></div>
+        <div class="grid-item"><h4>🎁 Sales Promotion</h4><p>สิ่งจูงใจ<strong>ระยะสั้น</strong>กระตุ้นการซื้อ — ดึงความสนใจ, ตอบสนองเร็ว แต่ผลสั้น</p></div>
+        <div class="grid-item"><h4>🤝 Personal Selling</h4><p>นำเสนอ<strong>ตัวต่อตัว</strong>โดยพนักงานขาย — มีประสิทธิภาพสูงสุด แต่<strong>แพงที่สุด</strong></p></div>
+        <div class="grid-item"><h4>📰 Public Relations</h4><p>สร้างความสัมพันธ์กับสาธารณะ — <strong>น่าเชื่อถือสูง</strong>, ต้นทุนต่ำ, แต่ควบคุมยาก</p></div>
+        <div class="grid-item"><h4>📧 Direct Marketing</h4><p>เชื่อมตรงกับลูกค้าเฉพาะเจาะจง — ข้อความ customized, เกิด dialogue ได้</p></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>🔗 Integrated Marketing Communications (IMC)</h2>
+      <div class="highlight"><strong>IMC</strong> = ผสานและประสานงานช่องทางสื่อสารทั้งหมดของบริษัท เพื่อส่งมอบข้อความที่ <strong>ชัดเจน สม่ำเสมอ น่าสนใจ</strong></div>
+      <ul>
+        <li>รับรู้ทุกจุดที่ลูกค้าพบกับแบรนด์ (contact points)</li>
+        <li>ส่งข้อความเดียวกันในทุกช่องทาง — โฆษณา, PR, พนักงานขาย, โปรโมชั่น</li>
+      </ul>
+      <div class="info"><strong>New Communications Model:</strong> บริษัทหันมาทำ <strong>Narrowcasting</strong> (เจาะกลุ่มแคบ แม่นยำ) แทน Broadcasting — เพราะผู้บริโภคเปลี่ยน, กลยุทธ์เปลี่ยน, เทคโนโลยีเปลี่ยน</div>
+    </div>
+
+    <div class="card">
+      <h2>⬆️⬇️ Push vs. Pull Strategy</h2>
+      <div class="grid">
+        <div class="grid-item" style="border-top-color:#e74c3c;">
+          <h4>📤 Push Strategy</h4>
+          <p><strong>ดัน</strong>สินค้าผ่านช่องทาง: ผู้ผลิตใช้ sales force และ trade promotion โปรโมตให้คนกลาง → คนกลางโปรโมตต่อให้ผู้บริโภค</p>
+        </div>
+        <div class="grid-item" style="border-top-color:#27ae60;">
+          <h4>📥 Pull Strategy</h4>
+          <p><strong>ดึง</strong>ความต้องการจากผู้บริโภค: บริษัทโฆษณาตรงถึงผู้บริโภค → ผู้บริโภคไปถามหาสินค้า → สร้าง demand vacuum ดึงสินค้าผ่านช่องทาง</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>📋 Major Advertising Decisions</h2>
+      <div class="stage-tabs">
+        <button class="stage-btn active" onclick="showStage('ad1',this)">1️⃣ Objectives</button>
+        <button class="stage-btn" onclick="showStage('ad2',this)">2️⃣ Budget</button>
+        <button class="stage-btn" onclick="showStage('ad3',this)">3️⃣ Message</button>
+        <button class="stage-btn" onclick="showStage('ad4',this)">4️⃣ Media</button>
+        <button class="stage-btn" onclick="showStage('ad5',this)">5️⃣ Evaluation</button>
+      </div>
+
+      <div id="stage-ad1" class="stage-content active">
+        <h3>Setting Advertising Objectives</h3>
+        <div class="highlight"><strong>Advertising Objective</strong> = งานสื่อสารเฉพาะที่ต้องบรรลุกับกลุ่มเป้าหมายเฉพาะในช่วงเวลาเฉพาะ จำแนกตาม primary purpose:</div>
+        <div class="grid">
+          <div class="grid-item" style="border-top-color:#3498db;"><h4>📢 Informative</h4><p>ให้ข้อมูล — ใช้ตอน<strong>เปิดตัวสินค้าใหม่</strong>, สร้าง <strong>primary demand</strong></p></div>
+          <div class="grid-item" style="border-top-color:#e67e22;"><h4>💪 Persuasive</h4><p>โน้มน้าว — ใช้ตอน<strong>แข่งขันสูงขึ้น</strong>, สร้าง <strong>selective demand</strong><br>บางครั้งกลายเป็น <strong>Comparative/Attack Advertising</strong></p></div>
+          <div class="grid-item" style="border-top-color:#27ae60;"><h4>🔔 Reminder</h4><p>เตือนความจำ — ใช้กับ<strong>สินค้า mature</strong>, รักษาความสัมพันธ์กับลูกค้า</p></div>
+        </div>
+      </div>
+
+      <div id="stage-ad2" class="stage-content">
+        <h3>Setting the Advertising Budget</h3>
+        <table>
+          <tr><th>วิธี</th><th>คำอธิบาย</th><th>ข้อสังเกต</th></tr>
+          <tr><td><strong>Affordable</strong></td><td>ตั้งงบตามที่บริหารคิดว่าแบกรับได้</td><td>⚠️ ละเลยผลของโฆษณาต่อยอดขาย</td></tr>
+          <tr><td><strong>% of Sales</strong></td><td>% ของยอดขายปัจจุบัน/คาดการณ์ หรือราคาขายต่อหน่วย</td><td>ง่าย แต่ logic ย้อนกลับ (ยอดขายควรเป็นผล ไม่ใช่เหตุ)</td></tr>
+          <tr><td><strong>Competitive Parity</strong></td><td>จับคู่กับงบของคู่แข่ง</td><td>สมมติว่าคู่แข่งรู้ดีกว่าเรา</td></tr>
+          <tr><td><strong>Objective &amp; Task</strong></td><td>กำหนดวัตถุประสงค์ → ระบุงาน → ประมาณต้นทุน</td><td>✅ <strong>สมเหตุสมผลที่สุด</strong></td></tr>
+        </table>
+      </div>
+
+      <div id="stage-ad3" class="stage-content">
+        <h3>Message Strategy</h3>
+        <div class="highlight"><strong>Creative Concept</strong> = แนวคิดสร้างสรรค์ที่นำกลยุทธ์ข้อความออกมาในแบบที่โดดเด่นและน่าจำ</div>
+        <p><strong>Advertising Appeals ต้องมี:</strong></p>
+        <div class="grid">
+          <div class="grid-item"><h4>✅ Meaningful</h4><p>ชี้ประโยชน์ที่ทำให้สินค้าน่าต้องการ</p></div>
+          <div class="grid-item"><h4>✅ Believable</h4><p>ผู้บริโภคเชื่อว่าสินค้าส่งมอบสิ่งที่สัญญาได้จริง</p></div>
+          <div class="grid-item"><h4>✅ Distinctive</h4><p>บอกได้ว่าดีกว่าแบรนด์คู่แข่งอย่างไร</p></div>
+        </div>
+        <h4>🎬 Execution Styles</h4>
+        <table>
+          <tr><th>Style</th><th>คำอธิบาย</th></tr>
+          <tr><td>Slice of life</td><td>คนธรรมดาใช้สินค้าในสถานการณ์ปกติ</td></tr>
+          <tr><td>Lifestyle</td><td>แสดงว่าสินค้าเข้ากับ lifestyle แบบใด</td></tr>
+          <tr><td>Fantasy</td><td>สร้างเรื่องราวในจินตนาการรอบสินค้า</td></tr>
+          <tr><td>Mood or image</td><td>สร้างอารมณ์ เช่น ความงาม ความรัก ความสงบ</td></tr>
+          <tr><td>Musical</td><td>ใช้เพลง/ตัวละครร้องเพลงเกี่ยวกับสินค้า</td></tr>
+          <tr><td>Personality symbol</td><td>สร้างตัวละครเป็นตัวแทนสินค้า</td></tr>
+          <tr><td>Technical expertise</td><td>แสดงความเชี่ยวชาญของบริษัทในการผลิต</td></tr>
+          <tr><td>Scientific evidence</td><td>นำเสนอผลสำรวจหรือหลักฐานวิทยาศาสตร์</td></tr>
+          <tr><td>Testimonial/Endorsement</td><td>บุคคลที่น่าเชื่อถือรับรองสินค้า</td></tr>
+        </table>
+        <div class="info"><strong>Consumer-Generated Messages:</strong> โฆษณาที่ผู้บริโภคสร้างเอง — สร้างมุมมองใหม่, เพิ่ม involvement กับแบรนด์ (เช่น Doritos "Crash the Super Bowl")</div>
+      </div>
+
+      <div id="stage-ad4" class="stage-content">
+        <h3>Selecting Advertising Media</h3>
+        <div class="highlight"><strong>Advertising Media</strong> = ช่องทางส่งมอบข้อความโฆษณาถึงกลุ่มผู้ชมเป้าหมาย</div>
+        <p><strong>ขั้นตอน:</strong> กำหนด Reach/Frequency/Impact → เลือกประเภทสื่อ → เลือกช่องทางเฉพาะ → กำหนดช่วงเวลา</p>
+        <div class="grid">
+          <div class="grid-item"><h4>📏 Reach</h4><p>% ของคนในตลาดเป้าหมายที่ถูกเปิดรับในช่วงแคมเปญ</p></div>
+          <div class="grid-item"><h4>🔁 Frequency</h4><p>จำนวนครั้งที่บุคคลเฉลี่ยถูกเปิดรับข้อความ</p></div>
+          <div class="grid-item"><h4>💥 Media Impact</h4><p>คุณค่าเชิงคุณภาพของการรับสัมผัสผ่านสื่อนั้น</p></div>
+        </div>
+        <table>
+          <tr><th>Medium</th><th>ข้อดี</th><th>ข้อจำกัด</th></tr>
+          <tr><td><strong>Television</strong></td><td>ครอบคลุมกว้าง, รวม sight+sound+motion</td><td>ต้นทุนรวมสูง, clutter มาก</td></tr>
+          <tr><td><strong>Newspapers</strong></td><td>ยืดหยุ่น, timely, น่าเชื่อถือ</td><td>อายุสั้น, คุณภาพพิมพ์ต่ำ</td></tr>
+          <tr><td><strong>Internet</strong></td><td>Selectivity สูง, ต้นทุนต่ำ, interactive</td><td>Impact ต่ำ, ผู้ชมควบคุมการรับสัมผัส</td></tr>
+          <tr><td><strong>Direct Mail</strong></td><td>Selectivity สูง, personalized</td><td>ภาพ "junk mail"</td></tr>
+          <tr><td><strong>Magazines</strong></td><td>Selectivity สูง, อายุยาว, prestige</td><td>ต้นทุนสูง, lead time นาน</td></tr>
+          <tr><td><strong>Radio</strong></td><td>Local coverage ดี, ต้นทุนต่ำ</td><td>Audio only, "the half-heard"</td></tr>
+          <tr><td><strong>Outdoor</strong></td><td>Repeat exposure สูง, ต้นทุนต่ำ</td><td>Selectivity น้อย, สร้างสรรค์จำกัด</td></tr>
+        </table>
+        <div class="grid">
+          <div class="grid-item" style="border-top-color:#3498db;"><h4>📅 Continuity</h4><p>กระจายโฆษณา<strong>สม่ำเสมอ</strong>ตลอดช่วงเวลา</p></div>
+          <div class="grid-item" style="border-top-color:#e67e22;"><h4>📅 Pulsing</h4><p>กระจายโฆษณา<strong>ไม่สม่ำเสมอ</strong> — ช่วงหนักสลับช่วงเบา</p></div>
+        </div>
+      </div>
+
+      <div id="stage-ad5" class="stage-content">
+        <h3>Advertising Evaluation</h3>
+        <div class="highlight"><strong>Return on Advertising Investment</strong> = ผลตอบแทนสุทธิจากการลงทุนโฆษณา หารด้วยต้นทุนการลงทุนโฆษณา</div>
+        <div class="grid">
+          <div class="grid-item"><h4>📣 Communication Effects</h4><p>โฆษณาสื่อสารได้ดีแค่ไหน — ทดสอบก่อน/หลังลงโฆษณา</p></div>
+          <div class="grid-item"><h4>💰 Sales &amp; Profit Effects</h4><p>เปรียบเทียบยอดขายและกำไรก่อน/หลังแคมเปญ</p></div>
+        </div>
+        <div class="info"><strong>Advertising Agency</strong> = บริษัทบริการการตลาดที่ช่วยในการวางแผน เตรียมการ ดำเนินการ และประเมินโปรแกรมโฆษณา</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>📰 Public Relations (PR)</h2>
+      <div class="highlight"><strong>PR</strong> = กิจกรรมสร้างความสัมพันธ์ที่ดีกับกลุ่มสาธารณะของบริษัท ใช้ส่งเสริมสินค้า บุคคล สถานที่ แนวคิด กิจกรรม ประเทศ องค์กร</div>
+      <div class="success"><strong>จุดเด่น PR:</strong> มีผลต่อ public awareness <strong>สูงมาก</strong> ในต้นทุนที่<strong>ต่ำกว่าโฆษณามาก</strong> และน่าเชื่อถือกว่า เพราะไม่ได้มาจากการจ่ายเงินโดยตรง</div>
+      <h3>Functions ของฝ่าย PR</h3>
+      <div class="grid">
+        <div class="grid-item"><h4>📋 Press Relations</h4><p>จัดการข้อมูลข่าวสารองค์กรในสื่อ</p></div>
+        <div class="grid-item"><h4>🛒 Product Publicity</h4><p>โปรโมตสินค้าเฉพาะ</p></div>
+        <div class="grid-item"><h4>🏛️ Public Affairs</h4><p>สร้างสัมพันธ์กับชุมชนและรัฐบาล</p></div>
+        <div class="grid-item"><h4>🏦 Lobbying</h4><p>สร้างสัมพันธ์กับผู้ออกกฎหมาย</p></div>
+        <div class="grid-item"><h4>📈 Investor Relations</h4><p>สัมพันธ์กับผู้ถือหุ้น/นักลงทุน</p></div>
+        <div class="grid-item"><h4>🌱 Development</h4><p>หาทุนจากผู้บริจาค/สมาชิก</p></div>
+      </div>
+      <h3>🛠️ Major PR Tools</h3>
+      <div class="grid">
+        <div class="grid-item"><h4>📰 News</h4><p>สร้าง/ค้นหาข่าวที่ดีเกี่ยวกับบริษัทและสินค้า</p></div>
+        <div class="grid-item"><h4>🎉 Special Events</h4><p>งานแถลงข่าว ทัวร์ นิทรรศการ การแข่งขัน</p></div>
+        <div class="grid-item"><h4>📝 Written Materials</h4><p>รายงานประจำปี โบรชัวร์ บทความ จดหมายข่าว</p></div>
+        <div class="grid-item"><h4>🎥 Audiovisual Material</h4><p>ภาพยนตร์ วิดีโอ พอดแคสต์</p></div>
+        <div class="grid-item"><h4>🏢 Corporate Identity</h4><p>โลโก้ เครื่องเขียน ป้าย ชุดพนักงาน</p></div>
+        <div class="grid-item"><h4>🌍 Public Service</h4><p>กิจกรรม CSR และสาธารณประโยชน์</p></div>
+      </div>
+    </div>
+
+    <div class="quiz-box">
+      <h3>🧠 ทดสอบความเข้าใจ — บทที่ 12</h3>
+      <p><strong>Q:</strong> วิธีตั้งงบโฆษณาที่ "สมเหตุสมผลที่สุด" คือวิธีใด?</p>
+      <div class="quiz-options">
+        <button class="quiz-option" onclick="checkAnswer(this,false)">A) Affordable Method</button>
+        <button class="quiz-option" onclick="checkAnswer(this,false)">B) Percentage-of-Sales Method</button>
+        <button class="quiz-option" onclick="checkAnswer(this,false)">C) Competitive-Parity Method</button>
+        <button class="quiz-option" onclick="checkAnswer(this,true)">D) Objective-and-Task Method</button>
+      </div>
+      <div class="quiz-feedback"></div>
+    </div>
+  </div>
+
+  <!-- ===== TAB 13 ===== -->
+  <div id="tab-13" class="tab-content">
+    <div class="intro-box">
+      <h2>🤝 บทที่ 13: Personal Selling &amp; Sales Promotion</h2>
+      <p>บทบาทของพนักงานขาย, กระบวนการขาย 6 ขั้น, Sales Force Management และเครื่องมือ Sales Promotion ทุกประเภท</p>
+    </div>
+
+    <div class="card">
+      <h2>🧑‍💼 Personal Selling</h2>
+      <div class="highlight"><strong>Personal Selling</strong> = การนำเสนอส่วนตัวโดยพนักงานขายของบริษัท <strong>เพื่อทำยอดขายและสร้างความสัมพันธ์</strong>กับลูกค้า</div>
+      <h3>Salesperson คือใคร?</h3>
+      <p>บุคคลที่เป็นตัวแทนบริษัทต่อลูกค้าโดยทำกิจกรรมต่อไปนี้ 1 อย่างหรือมากกว่า:</p>
+      <div class="grid">
+        <div class="grid-item"><h4>🔍 Prospecting</h4><p>ค้นหาลูกค้าที่มีศักยภาพ</p></div>
+        <div class="grid-item"><h4>📡 Communicating</h4><p>สื่อสารข้อมูลสินค้าและบริการ</p></div>
+        <div class="grid-item"><h4>💼 Selling</h4><p>เข้าหา นำเสนอ ตอบข้อโต้แย้ง ปิดการขาย</p></div>
+        <div class="grid-item"><h4>🔧 Servicing</h4><p>ให้บริการหลังการขาย แก้ปัญหา</p></div>
+        <div class="grid-item"><h4>📊 Information Gathering</h4><p>รวบรวมข้อมูลตลาดและลูกค้า</p></div>
+        <div class="grid-item"><h4>🤲 Relationship Building</h4><p>สร้างและรักษาความสัมพันธ์ระยะยาว</p></div>
+      </div>
+      <div class="info"><strong>Role of Sales Force:</strong> เป็น critical link ระหว่างบริษัทกับลูกค้า — ในสายตาลูกค้าหลายราย <em>พนักงานขายคือบริษัท</em> และประสาน marketing กับ sales เข้าด้วยกัน</div>
+    </div>
+
+    <div class="card">
+      <h2>🪜 Steps in the Selling Process (6 ขั้นตอน)</h2>
+      <div class="process-flow">
+        <div class="process-step" onclick="showStep(21)"><div class="num">1</div>Prospecting &amp; Qualifying</div>
+        <div class="process-step" onclick="showStep(22)"><div class="num">2</div>Preapproach</div>
+        <div class="process-step" onclick="showStep(23)"><div class="num">3</div>Approach</div>
+        <div class="process-step" onclick="showStep(24)"><div class="num">4</div>Presentation</div>
+        <div class="process-step" onclick="showStep(25)"><div class="num">5</div>Handling Objections</div>
+        <div class="process-step" onclick="showStep(26)"><div class="num">6</div>Closing &amp; Follow-up</div>
+      </div>
+      <div id="step-21" class="process-detail">
+        <h4>1. Prospecting &amp; Qualifying</h4>
+        <p><strong>Prospecting</strong> = ระบุลูกค้าที่มีศักยภาพที่ผ่านคุณสมบัติ</p>
+        <p><strong>Qualifying</strong> = คัดกรองหาลูกค้าที่ดีและตัดทิ้งคนที่ไม่เหมาะสม (good vs. poor prospects)</p>
+      </div>
+      <div id="step-22" class="process-detail">
+        <h4>2. Preapproach</h4>
+        <p>เรียนรู้ให้มากที่สุดเท่าที่เป็นไปได้เกี่ยวกับ <strong>ลูกค้าที่คาดหวัง</strong> ก่อนโทรขาย — ศึกษาข้อมูลบริษัท, ผู้มีอำนาจตัดสินใจ, ความต้องการ</p>
+      </div>
+      <div id="step-23" class="process-detail">
+        <h4>3. Approach</h4>
+        <p><strong>พบลูกค้าครั้งแรก</strong> — สร้างความประทับใจแรก กำหนด tone ของความสัมพันธ์</p>
+        <p>เปิดด้วยคำพูดที่ดี ฟังมากกว่าพูด เน้นการสร้างสัมพันธ์</p>
+      </div>
+      <div id="step-24" class="process-detail">
+        <h4>4. Presentation &amp; Demonstration</h4>
+        <p>เล่า <strong>value story</strong> ให้ผู้ซื้อฟัง แสดงให้เห็นว่า offer ของบริษัทแก้ปัญหาของลูกค้าได้อย่างไร</p>
+        <p>เน้นการ <strong>ฟังความต้องการลูกค้า</strong> ไม่ใช่แค่พูดถึงสินค้า</p>
+      </div>
+      <div id="step-25" class="process-detail">
+        <h4>5. Handling Objections</h4>
+        <p>ค้นหา ชี้แจง และ<strong>เอาชนะข้อโต้แย้ง</strong>ของลูกค้าเพื่อนำไปสู่การซื้อ</p>
+        <p>มองข้อโต้แย้งเป็นโอกาสให้ข้อมูลเพิ่มเติม ไม่ใช่อุปสรรค</p>
+      </div>
+      <div id="step-26" class="process-detail">
+        <h4>6. Closing &amp; Follow-up</h4>
+        <p><strong>Closing</strong> = ขอให้ลูกค้าสั่งซื้อ</p>
+        <p><strong>Follow-up</strong> = ติดตามหลังการขายเพื่อให้ลูกค้าพอใจและซื้อซ้ำ — สร้างความสัมพันธ์ระยะยาว</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>💎 Personal Selling &amp; Value Selling</h2>
+      <div class="highlight"><strong>Value Selling</strong> = บริษัทส่วนใหญ่อยากให้พนักงานขายปฏิบัติ — เน้นเข้าใจความต้องการลูกค้าและสร้างคุณค่าให้ลูกค้า ไม่ใช่แค่ขาย</div>
+      <p>Value Selling ต้องการ:</p>
+      <ul>
+        <li><strong>ฟัง</strong>ลูกค้าอย่างตั้งใจ</li>
+        <li><strong>เข้าใจ</strong>ความต้องการของลูกค้า</li>
+        <li>ประสานงานทั้งบริษัทเพื่อ<strong>สร้างความสัมพันธ์ระยะยาว</strong>ที่ก่อให้เกิดคุณค่า</li>
+      </ul>
+      <div class="info"><strong>Transaction-oriented vs. Relationship Marketing:</strong> การขายสมัยใหม่เน้น <strong>Relationship</strong> — สร้างความไว้วางใจ ไม่ใช่แค่ปิดดีล</div>
+    </div>
+
+    <div class="card">
+      <h2>🎯 Sales Promotion</h2>
+      <div class="highlight"><strong>Sales Promotion</strong> = สิ่งจูงใจ<strong>ระยะสั้น</strong>เพื่อกระตุ้นการซื้อหรือการขายสินค้า/บริการ</div>
+      <p>Sales Promotions ใช้<strong>ร่วมกับ</strong> promotion mix tools อื่น และช่วย<strong>เสริมสถานะสินค้า + สร้างความสัมพันธ์ระยะยาว</strong></p>
+
+      <h3>กลุ่มเป้าหมายของ Sales Promotion</h3>
+      <div class="grid">
+        <div class="grid-item"><h4>👥 Consumer Promotions</h4><p>มุ่งเป้าที่<strong>ผู้บริโภคขั้นสุดท้าย</strong></p></div>
+        <div class="grid-item"><h4>🏪 Trade Promotions</h4><p>มุ่งเป้าที่<strong>ผู้ค้าปลีกและขายส่ง</strong></p></div>
+        <div class="grid-item"><h4>🏢 Business Promotions</h4><p>มุ่งเป้าที่<strong>ลูกค้าธุรกิจ</strong></p></div>
+        <div class="grid-item"><h4>💼 Sales Force Promotions</h4><p>มุ่งเป้าที่<strong>พนักงานขาย</strong>ของบริษัท</p></div>
+      </div>
+
+      <h3>🛒 Consumer Promotion Tools</h3>
+      <div class="highlight"><strong>Consumer Promotion</strong> = เครื่องมือ sales promotion เพื่อกระตุ้นการซื้อและเพิ่ม involvement ระยะยาว</div>
+      <table>
+        <tr><th>เครื่องมือ</th><th>คำอธิบาย</th></tr>
+        <tr><td><strong>Samples</strong></td><td>ให้ทดลองสินค้าจำนวนเล็กน้อยฟรี — มีประสิทธิภาพสูงแต่ต้นทุนสูง</td></tr>
+        <tr><td><strong>Coupons</strong></td><td>ใบรับรองที่ช่วยให้ผู้ซื้อ<strong>ประหยัดเงิน</strong>เมื่อซื้อสินค้าที่ระบุ</td></tr>
+        <tr><td><strong>Cash Refunds / Rebates</strong></td><td>ลดราคา<strong>หลังการซื้อ</strong> — ส่งหลักฐานซื้อให้ผู้ผลิต ผู้ผลิตคืนเงิน</td></tr>
+        <tr><td><strong>Price Packs (Cents-off deals)</strong></td><td>ลดราคาจาก<strong>ราคาปกติ</strong>ของสินค้า</td></tr>
+        <tr><td><strong>Premiums</strong></td><td>ของแถม — ให้ฟรีหรือราคาต่ำมาก เป็นแรงจูงใจในการซื้อ</td></tr>
+        <tr><td><strong>Advertising Specialties</strong></td><td>สินค้าที่มีประโยชน์<strong>พิมพ์ชื่อ/โลโก้</strong>ผู้โฆษณา เช่น ปากกา แก้ว</td></tr>
+        <tr><td><strong>POP Promotions</strong></td><td>ดิสเพลย์และการสาธิต<strong>ที่จุดขาย</strong></td></tr>
+        <tr><td><strong>Contests / Sweepstakes / Games</strong></td><td>ให้ผู้บริโภค<strong>มีโอกาสชนะ</strong>รางวัล</td></tr>
+        <tr><td><strong>Event Marketing</strong></td><td>สร้างหรือสนับสนุน event เพื่อการตลาดของแบรนด์</td></tr>
+      </table>
+
+      <h3>🏪 Trade Promotion Tools</h3>
+      <div class="highlight"><strong>Trade Promotion</strong> = เครื่องมือ sales promotion เพื่อโน้มน้าวผู้ค้าปลีก/ขายส่ง ให้รับสินค้า, ให้พื้นที่วางขาย, โปรโมตในโฆษณา, และดันสินค้าถึงผู้บริโภค</div>
+      <p>ได้แก่: Contests, Premiums, Displays, <strong>Discounts/Price-off/Off-invoice/Off-list</strong>, Allowances, Free goods, Push money, Specialty advertising items</p>
+
+      <h3>🏢 Business Promotion Tools</h3>
+      <div class="highlight"><strong>Business Promotion</strong> = เครื่องมือเพื่อสร้าง leads, กระตุ้นการซื้อ, ให้รางวัลลูกค้า และจูงใจพนักงานขาย</div>
+      <div class="grid">
+        <div class="grid-item"><h4>🏛️ Conventions &amp; Trade Shows</h4><p>ช่วย vendors หา leads ใหม่, ติดต่อลูกค้า, แนะนำสินค้าใหม่</p></div>
+        <div class="grid-item"><h4>🏆 Sales Contests</h4><p>แข่งขันสำหรับพนักงานขายหรือ dealers เพื่อเพิ่ม performance ในช่วงที่กำหนด</p></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>📐 Developing the Sales Promotion Program</h2>
+      <p>นักการตลาดต้องตัดสินใจเพิ่มเติมเกี่ยวกับโปรแกรม:</p>
+      <ul>
+        <li>กำหนด<strong>ขนาดของสิ่งจูงใจ</strong> (size of incentive)</li>
+        <li>กำหนด<strong>เงื่อนไขการเข้าร่วม</strong> (conditions for participation)</li>
+        <li>กำหนด<strong>วิธีโปรโมตและกระจาย</strong>โปรแกรม</li>
+        <li>กำหนด<strong>ระยะเวลา</strong>ของโปรโมชั่น</li>
+        <li><strong>ประเมินผล</strong>โปรโมชั่น</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>📈 ปัจจัยที่ทำให้ Sales Promotion เติบโต</h2>
+      <ul>
+        <li>ผู้จัดการมองว่าเป็นเครื่องมือขายระยะสั้นที่มีประสิทธิภาพ</li>
+        <li>คู่แข่งใช้ sales promotion เพื่อสร้างความแตกต่าง</li>
+        <li>ประสิทธิภาพของโฆษณาลดลง</li>
+        <li>Sales promotions ช่วยดึงผู้บริโภคที่นิยมความประหยัด</li>
+      </ul>
+    </div>
+
+    <div class="quiz-box">
+      <h3>🧠 ทดสอบความเข้าใจ — บทที่ 13</h3>
+      <p><strong>Q:</strong> ขั้นตอนแรกสุดในกระบวนการขาย (Selling Process) คืออะไร?</p>
+      <div class="quiz-options">
+        <button class="quiz-option" onclick="checkAnswer(this,false)">A) Approach</button>
+        <button class="quiz-option" onclick="checkAnswer(this,true)">B) Prospecting &amp; Qualifying</button>
+        <button class="quiz-option" onclick="checkAnswer(this,false)">C) Preapproach</button>
+        <button class="quiz-option" onclick="checkAnswer(this,false)">D) Presentation</button>
+      </div>
+      <div class="quiz-feedback"></div>
+    </div>
+  </div>
+
+  <!-- ===== TAB 14 ===== -->
+  <div id="tab-14" class="tab-content">
+    <div class="intro-box">
+      <h2>💻 บทที่ 14: Direct &amp; Online Marketing</h2>
+      <p>Direct Marketing คืออะไร, ประโยชน์ต่อผู้ซื้อและผู้ขาย, รูปแบบต่างๆ ของ Direct Marketing, Online Marketing และ Social Media</p>
+    </div>
+
+    <div class="card">
+      <h2>📬 Direct Marketing</h2>
+      <div class="highlight"><strong>Direct Marketing</strong> = การเชื่อมต่อโดยตรงกับผู้บริโภคที่คัดเลือกมาอย่างรอบคอบหรือเจาะจง บ่อยครั้งแบบ <strong>one-to-one, interactive</strong></div>
+      <p>สำหรับหลายบริษัท Direct Marketing ถือเป็น<strong>โมเดลธุรกิจที่สมบูรณ์</strong> (complete model for doing business) ไม่ใช่แค่เครื่องมือเสริม เช่น GEICO, Amazon</p>
+
+      <h3>ประโยชน์ของ Direct Marketing</h3>
+      <div class="grid">
+        <div class="grid-item" style="border-top-color:#3498db;">
+          <h4>👤 ต่อผู้ซื้อ (Buyers)</h4>
+          <ul>
+            <li>สะดวก (Convenient)</li>
+            <li>ง่าย (Easy)</li>
+            <li>เป็นส่วนตัว (Private)</li>
+            <li>ทันทีและ interactive</li>
+            <li>เข้าถึงข้อมูลสินค้า บริษัท คู่แข่งได้มาก</li>
+          </ul>
+        </div>
+        <div class="grid-item" style="border-top-color:#27ae60;">
+          <h4>🏢 ต่อผู้ขาย (Sellers)</h4>
+          <ul>
+            <li>สร้างความสัมพันธ์กับลูกค้าได้</li>
+            <li>ช่องทางต้นทุนต่ำ รวดเร็ว และมีประสิทธิภาพ</li>
+            <li>Online direct marketing ลดต้นทุน เพิ่มประสิทธิภาพ logistics</li>
+            <li>ยืดหยุ่นสูง</li>
+            <li>เข้าถึงผู้ซื้อที่ไม่สามารถเข้าถึงด้วยช่องทางอื่น</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>🗃️ Customer Database</h2>
+      <div class="highlight"><strong>Customer Database</strong> = ฐานข้อมูลที่เป็นระเบียบของข้อมูลที่ครอบคลุมเกี่ยวกับลูกค้าหรือ prospects รวมถึงข้อมูล <strong>geographic, demographic, psychographic, และ behavioral</strong></div>
+      <p>ใช้เพื่อค้นหา target ที่ดี, แต่ง offer และ communication ให้เหมาะสม, สร้างความสัมพันธ์ระยะยาว</p>
+    </div>
+
+    <div class="card">
+      <h2>🔀 Forms of Direct Marketing</h2>
+      <div class="stage-tabs">
+        <button class="stage-btn active" onclick="showStage('dm1',this)">📮 Direct Mail</button>
+        <button class="stage-btn" onclick="showStage('dm2',this)">📚 Catalog</button>
+        <button class="stage-btn" onclick="showStage('dm3',this)">📞 Telemarketing</button>
+        <button class="stage-btn" onclick="showStage('dm4',this)">📺 DRTV</button>
+        <button class="stage-btn" onclick="showStage('dm5',this)">🖥️ Kiosk</button>
+        <button class="stage-btn" onclick="showStage('dm6',this)">🌐 Online</button>
+      </div>
+
+      <div id="stage-dm1" class="stage-content active">
+        <h3>Direct Mail Marketing</h3>
+        <ul>
+          <li>ส่ง offer, announcement, reminder หรือสิ่งอื่นไปยังที่อยู่เฉพาะของบุคคล</li>
+          <li>เหมาะกับการสื่อสาร<strong>ตรง, one-to-one</strong></li>
+          <li>อนุญาตให้เลือก target สูง, personalized, ยืดหยุ่น, วัดผลได้</li>
+          <li>Traditional direct mail ยังคงเป็นส่วนสำคัญของ integrated campaign</li>
+        </ul>
+      </div>
+
+      <div id="stage-dm2" class="stage-content">
+        <h3>Catalog Marketing</h3>
+        <ul>
+          <li>การตลาดผ่านแคตาล็อก print, video, digital ที่ส่งให้ลูกค้าเลือก, วางในร้าน, หรือออนไลน์</li>
+          <li>Online catalogs ตัดต้นทุน printing/mailing</li>
+          <li>เสนอสินค้าไม่จำกัด, format หลากหลาย, real-time merchandising</li>
+        </ul>
+      </div>
+
+      <div id="stage-dm3" class="stage-content">
+        <h3>Telemarketing</h3>
+        <ul>
+          <li>ใช้โทรศัพท์ขายตรงถึงลูกค้า</li>
+          <li><strong>Outbound:</strong> โทรออกเพื่อขายตรงถึงผู้บริโภคและธุรกิจ</li>
+          <li><strong>Inbound:</strong> รับโทรศัพท์จาก TV/print ads, direct mail, catalogs</li>
+          <li>ให้ความสะดวกและข้อมูลสินค้า/บริการเพิ่มเติม</li>
+        </ul>
+      </div>
+
+      <div id="stage-dm4" class="stage-content">
+        <h3>Direct-Response Television (DRTV)</h3>
+        <ul>
+          <li>การตลาดผ่านโทรทัศน์ รวมถึง <strong>direct-response TV advertising (infomercials)</strong> และ interactive TV (iTV)</li>
+          <li>Infomercials = โฆษณายาว (30 นาที) ที่ดูเหมือนรายการ</li>
+          <li>บริษัทใหญ่อย่าง Kodak ใช้ DRTV ส่งข้อความถึงลูกค้าโดยตรง</li>
+        </ul>
+      </div>
+
+      <div id="stage-dm5" class="stage-content">
+        <h3>Kiosk Marketing</h3>
+        <ul>
+          <li>เครื่องให้ข้อมูลสินค้า/บริการและสั่งซื้อ วางในร้านค้า สนามบิน โรงแรม มหาวิทยาลัย</li>
+          <li>ตัวอย่าง: Redbox — เครื่องเช่า DVD กว่า 27,000 เครื่องทั่วประเทศ</li>
+        </ul>
+      </div>
+
+      <div id="stage-dm6" class="stage-content">
+        <h3>Online Marketing</h3>
+        <div class="highlight"><strong>Online Marketing</strong> = ความพยายามตลาดสินค้า/บริการและสร้างความสัมพันธ์กับลูกค้าผ่านอินเทอร์เน็ต</div>
+        <p><strong>Internet</strong> = เครือข่ายสาธารณะขนาดมหึมาที่เชื่อมผู้ใช้ทั่วโลกเข้าด้วยกัน — ให้นักการตลาดวิธีใหม่ทั้งหมดในการสร้างคุณค่าและสัมพันธ์กับลูกค้า</p>
+        <div class="grid">
+          <div class="grid-item" style="border-top-color:#e74c3c;">
+            <h4>Click-only Companies</h4>
+            <p>ดำเนินงานออนไลน์เท่านั้น <strong>ไม่มี brick-and-mortar</strong> — ได้แก่ e-tailers, search engines, portals, content sites, online social networks</p>
+          </div>
+          <div class="grid-item" style="border-top-color:#3498db;">
+            <h4>Click-and-Mortar Companies</h4>
+            <p>บริษัท brick-and-mortar ดั้งเดิมที่<strong>เพิ่มช่องทางออนไลน์</strong> — เช่น Staples ที่ให้ช่องทางครบครัน</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>🌐 Online Marketing Strategies</h2>
+      <div class="grid">
+        <div class="grid-item"><h4>🌍 Web Sites</h4><p>สร้างเว็บไซต์ที่มีส่วนร่วมสูง สะท้อน brand และกระตุ้นการซื้อ</p></div>
+        <div class="grid-item"><h4>📣 Online Advertising</h4><p>โฆษณาบนเว็บ เช่น banner ads, search-related ads, interstitials</p></div>
+        <div class="grid-item"><h4>📧 Email Marketing</h4><p>ส่ง email ที่มีคุณค่าและ personalized — ประหยัด แต่ต้องระวัง spam</p></div>
+        <div class="grid-item"><h4>📱 Social Media</h4><p>Facebook, Twitter, YouTube, blogs — สร้าง engagement และ community</p></div>
+        <div class="grid-item"><h4>📲 Mobile Marketing</h4><p>Smartphone apps, SMS — เข้าถึงผู้บริโภคที่ใดก็ได้ตลอดเวลา</p></div>
+        <div class="grid-item"><h4>🎥 Online Videos</h4><p>คลิปไวรัล, video ads — low cost, reach สูง, กระตุ้น engagement</p></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>⚠️ Public Policy &amp; Ethics in Direct Marketing</h2>
+      <p>ปัญหาที่ต้องระวังใน Direct Marketing:</p>
+      <div class="grid">
+        <div class="grid-item" style="border-top-color:#e74c3c;"><h4>😠 Irritation</h4><p>การตลาดที่รุกล้ำและก้าวร้าวเกินไป</p></div>
+        <div class="grid-item" style="border-top-color:#e74c3c;"><h4>🔒 Invasion of Privacy</h4><p>การรวบรวมข้อมูลส่วนตัวโดยไม่ได้รับอนุญาต</p></div>
+        <div class="grid-item" style="border-top-color:#e74c3c;"><h4>💰 Deception &amp; Fraud</h4><p>โฆษณาหลอกลวงหรือข้อเสนอที่ไม่ซื่อสัตย์</p></div>
+        <div class="grid-item" style="border-top-color:#e74c3c;"><h4>👶 Targeting the Vulnerable</h4><p>มุ่งเป้าไปที่กลุ่มเปราะบาง เช่น เด็กหรือผู้สูงอายุ</p></div>
+      </div>
+      <div class="warning"><strong>Do-Not-Call Registry (สหรัฐฯ):</strong> กฎหมายให้ผู้บริโภคลงทะเบียนไม่รับสาย telemarketing — นักการตลาดต้องเคารพสิทธิ์นี้</div>
+    </div>
+
+    <div class="quiz-box">
+      <h3>🧠 ทดสอบความเข้าใจ — บทที่ 14</h3>
+      <p><strong>Q:</strong> บริษัทที่ดำเนินธุรกิจออนไลน์เท่านั้นโดยไม่มีหน้าร้านเรียกว่าอะไร?</p>
+      <div class="quiz-options">
+        <button class="quiz-option" onclick="checkAnswer(this,false)">A) Click-and-Mortar Company</button>
+        <button class="quiz-option" onclick="checkAnswer(this,true)">B) Click-only Company</button>
+        <button class="quiz-option" onclick="checkAnswer(this,false)">C) Brick-and-Mortar Company</button>
+        <button class="quiz-option" onclick="checkAnswer(this,false)">D) Hybrid Company</button>
+      </div>
+      <div class="quiz-feedback"></div>
+    </div>
+
+    <div class="card">
+      <h2>💭 Fuel for Thought — คำถามชวนคิด</h2>
+      <ul>
+        <li>Direct Marketing ต่างจาก Traditional Advertising อย่างไร? ข้อดีหลักคืออะไร?</li>
+        <li>ทำไม Amazon ถึงประสบความสำเร็จในฐานะ Direct Marketer? เขาใช้ Customer Database อย่างไร?</li>
+        <li>Social Media Marketing มีข้อดีและข้อเสียอย่างไรเมื่อเทียบกับ Traditional Advertising?</li>
+        <li>Privacy กับ Personalization ต้องหาสมดุลอย่างไร?</li>
+      </ul>
+    </div>
+  </div>
+
   <div class="footer">
     <p>📚 จัดทำเพื่อเตรียมสอบ — Marketing: An Introduction (Armstrong &amp; Kotler, 11e)</p>
-    <p>บทที่ 8: Developing New Products &amp; Managing PLC | บทที่ 9: Pricing | บทที่ 10: Marketing Channels | บทที่ 11: Retailing &amp; Wholesaling</p>
+    <p>บทที่ 2: Company &amp; Marketing Strategy | บทที่ 8–11: Products, Pricing, Channels, Retailing | บทที่ 12: Advertising &amp; PR | บทที่ 13: Personal Selling &amp; Sales Promotion | บทที่ 14: Direct &amp; Online Marketing</p>
   </div>
 
 </div>
@@ -2191,8 +2920,9 @@
   }
 
   function showStage(stage, btn) {
-    document.querySelectorAll('.stage-content').forEach(el => el.classList.remove('active'));
-    document.querySelectorAll('.stage-btn').forEach(el => el.classList.remove('active'));
+    const parent = btn.closest('.card');
+    parent.querySelectorAll('.stage-content').forEach(el => el.classList.remove('active'));
+    parent.querySelectorAll('.stage-btn').forEach(el => el.classList.remove('active'));
     document.getElementById('stage-' + stage).classList.add('active');
     btn.classList.add('active');
   }
